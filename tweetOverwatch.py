@@ -422,13 +422,3 @@ elif randomSentence == 'sombra':
 		tweetStr = "Sombra: Just " + randomIngVerb + " " + randomArticleNoun
 	elif sombra == '4':
 		tweetStr = "Sombra: " + randomVerb + " With The Best And " + randomVerb2 + " Like The Rest"
-
-#twitter api
-apiKey = 'ajdgwfC9HbGvsgt8qXCQonmSE'
-apiSecret = 'iCtvY6RTBX5UlcsVtcWXFED7MkF7EQKvJ4MpwcNxBoX2CWeo2J'
-accessToken = '771450156675899392-0doCaLKxr9fVdWv12v8R434TzBomZSm'
-accessTokenSecret = 'zjz97uWs4Cl8Nvyw4UOowkX0JBHkFOFsLcYqKCc5TwEl3'
-
-api = Twython(apiKey,apiSecret,accessToken,accessTokenSecret)
-
-api.update_status(status=tweetStr)
