@@ -87,13 +87,3 @@ elif randomSentence == '19':
 	tweetStr = "how to " + randomVerb + ": first you " + randomVerb2 + " " + randomAllNoun + ", and then you " + randomVerb3
 elif randomSentence == '20':
 	tweetStr = randomProperNoun + " was an inside job"
-
-#twitter consumer access information
-apiKey = 'yCZyGii87mEIsbp202QV25N7h'
-apiSecret = 'rkZDXBny5UgguitHL4KmqJgrFClWjvDZ5GdaZwxOguDlC5S4wp'
-accessToken = '766349989513748480-DrNZ0ZBjENZ110GPCDu9iMRnCnb1Q7t'
-accessTokenSecret = 'W78BvPSHdwYMbBEhUppnIJWsNrMIKMALTUCGwcNX6q7hC'
-
-api = Twython(apiKey,apiSecret,accessToken,accessTokenSecret)
-
-api.update_status(status=tweetStr)
