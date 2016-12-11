@@ -17,7 +17,7 @@ num1 = 0
 #words = 0
 
 while wordCounter <= totalWords:
-        wordGenerator = ['plural countn']
+        wordGenerator = ['countn', 'plural countn']
         word = random.choice(wordGenerator)
         if word == 'countn':
                 #count noun
