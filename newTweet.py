@@ -10,7 +10,7 @@ countnGenerator = ['book', 'diary', 'laptop', 'movie', 'remote', 'shoe', 'bookba
 
 totalWords = random.choice(totalWordsGenerator)
 wordCounter = 1
-wordArray = array('l')
+wordArray = []
 tweetStr = ""
 
 #words = 0
