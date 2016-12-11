@@ -14,7 +14,7 @@ words = 0
 
 while wordCounter <= totalWords:
         words = words + 1
-        wordArray.insert(words, wordArray[wordCounter])
+        wordArray.append(words)
         wordCounter = wordCounter + 1
 tweetStr = wordArray[1]
 for l in wordArray:
