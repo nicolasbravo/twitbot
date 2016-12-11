@@ -28,6 +28,8 @@ while wordCounter <= totalWords:
                 #plural count noun
                 if countn[-1] == 's' or countn[-1] == 'x' or countn[-1] == 'z' or (countn[-1] == 'h' and countn[-2] == 'c') or (countn[-1] == 'h' and countn[-2] == 's'):
                         pluralCountn = countn + 'es'
+                else:
+                        pluralCountn = countn + 's'
                 wordArray.append(pluralCountn)
         wordCounter = wordCounter + 1
 for l in wordArray:
