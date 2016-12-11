@@ -19,5 +19,6 @@ while wordCounter <= totalWords:
 tweetStr = str(wordArray[1])
 for l in wordArray:
         while l <= totalWords - 1:
-                tweetStr = tweetStr + " " + str(wordArray[l + 1])
+                print(wordArray[l + 1])
+                #tweetStr = tweetStr + " " + str(wordArray[l + 1])
 print(tweetStr)
