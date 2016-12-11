@@ -10,8 +10,9 @@ countnGenerator = ['book', 'diary', 'laptop', 'movie', 'remote', 'shoe', 'bookba
 
 totalWords = random.choice(totalWordsGenerator)
 wordCounter = 1
-wordArray = []
+wordArray = {1 : '', 2 : '', 3 : '', 4 : '', 5 : '', 6 : '', 7 : '', 8 : '', 9 : '', 10 : '', 11 : '', 12 : '', 13 : '', 14 : '', 15 : '', 16 : '', 17 : '', 18 : '', 19 : '', 20 : ''}
 tweetStr = ""
+num1 = 0
 
 #words = 0
 
@@ -21,7 +22,8 @@ while wordCounter <= totalWords:
         if word == 'countn':
                 #count noun
                 countn = random.choice(countnGenerator)
-                wordArray.append(countn)
+                #wordArray.append(countn)
+                wordArray[num1] = countn
         elif word == 'plural countn':
                 #count noun
                 countn = random.choice(countnGenerator)
@@ -30,8 +32,10 @@ while wordCounter <= totalWords:
                         pluralCountn = countn + 'es'
                 else:
                         pluralCountn = countn + 's'
-                wordArray.append(pluralCountn)
+                #wordArray.append(pluralCountn)
+                wordArray[num1] = pluralCountn
         wordCounter = wordCounter + 1
+        num1 = num1 + 1
 for s in wordArray:
         tweetStr = tweetStr + " " + wordArray[s]
 tweetStr = tweetStr[1:]
