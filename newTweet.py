@@ -24,4 +24,5 @@ for l in wordArray:
         #if l <= totalWords - 1:
                 #print(wordArray[l + 1])
                 #tweetStr = tweetStr + " " + str(wordArray[l + 1])
+tweetStr = tweetStr[1:]
 print(tweetStr)
