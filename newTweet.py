@@ -44,7 +44,7 @@ while wordCounter <= totalWords:
                         pluralCountn = countn[:-2] + 'ices'
                 elif countn[-1] == 'u' and countn[-2] == 'a' and countn[-3] == 'e':
                         pluralCountn = countn + 'x'
-                elif (countn[-1] == 'm' and countn[-2] == 'u') or (countn[-1] == 'n' and countn[-2] == 'o') and countn != 'person'
+                elif (countn[-1] == 'm' and countn[-2] == 'u') or (countn[-1] == 'n' and countn[-2] == 'o') and countn != 'person':
                         pluralCountn = countn[:-2] + 'a'
                 elif countn == 'person':
                         pluralCountn = 'people'
