@@ -32,7 +32,7 @@ while wordCounter <= totalWords:
                         pluralCountn = countn + 's'
                 wordArray.append(pluralCountn)
         wordCounter = wordCounter + 1
-for x in wordArray:
-        tweetStr = tweetStr + " " + wordArray[x]
+for i in wordArray:
+        tweetStr = tweetStr + " " + wordArray[]
 tweetStr = tweetStr[1:]
 print(tweetStr)
