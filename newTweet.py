@@ -10,7 +10,12 @@ totalWords = random.choice(totalWordsGenerator)
 wordCounter = 1
 wordArray = array('l')
 
+words = 0
+
 while wordCounter <= totalWords:
-        wordArray.insert(words, for l in wordArray:
-        tweetStr = 
-#words = array('l', [1, 2, 3, 4, 5])
+        words = words + 1
+        wordArray.insert(words, wordArray[l])
+tweetStr = wordArray[1]
+for (l + 1) in wordArray:
+        tweetStr = tweetStr + " " + wordArray[l + 1]
+print(tweetStr)
