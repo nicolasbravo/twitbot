@@ -13,10 +13,11 @@ wordArray = array('l')
 words = 0
 
 while wordCounter <= totalWords:
-        words = words + 1
         wordArray.append(words)
+        words = words + 1
         wordCounter = wordCounter + 1
-tweetStr = str(wordArray[1])
+#tweetStr = str(wordArray[1])
+print(wordArray[1])
 for l in wordArray:
         if l <= totalWords - 1:
                 print(wordArray[l + 1])
