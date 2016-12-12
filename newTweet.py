@@ -14,16 +14,21 @@ wordCounter = 1
 wordArray = {1 : '', 2 : '', 3 : '', 4 : '', 5 : '', 6 : '', 7 : '', 8 : '', 9 : '', 10 : '', 11 : '', 12 : '', 13 : '', 14 : '', 15 : '', 16 : '', 17 : '', 18 : '', 19 : '', 20 : ''}
 tweetStr = ""
 num1 = 0
+previous = ""
 
 #words = 0
 
 while wordCounter <= totalWords:
-        wordGenerator = ['count noun', 'plural noun', 'article noun', 'regular past tense verb']
+	if previous == 'count noun' or previous == 'plural noun':
+		wordGenerator = ['regular past tense verb']
+	elif previous == 'the':
+		wordGenerator = ['count noun', 'plural noun', 'verb']
+	else:
+        	wordGenerator = ['plural noun', 'article noun', 'the', 'verb']
         word = random.choice(wordGenerator)
         if word == 'count noun':
                 #count noun
                 countn = random.choice(countnGenerator)
-                #wordArray.append(countn)
                 wordArray[num1] = countn
         elif word == 'plural noun':
                 #count noun
@@ -67,6 +72,10 @@ while wordCounter <= totalWords:
 		else:
 			articleCountn = 'a ' + countn
 		wordArray[num1] = articleCountn
+	elif word == 'verb':
+		#verb
+		verb = random.choice(verbGenerator)
+		wordArray[num1] = verb
 	elif word == 'regular past tense verb':
 		#verb
 		verb = random.choice(verbGenerator)
@@ -81,6 +90,9 @@ while wordCounter <= totalWords:
 		else:
 			regularPastVerb = verb + 'ed'
 		wordArray[num1] = regularPastVerb
+	elif word == 'the':
+		wordArray[num1] = 'the'
+	previous = word
         wordCounter = wordCounter + 1
         num1 = num1 + 1
 for s in wordArray:
