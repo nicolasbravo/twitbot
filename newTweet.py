@@ -56,7 +56,6 @@ while wordCounter <= totalWords:
                         pluralCountn = countn[:-4] + 'ice'
                 else:
                         pluralCountn = countn + 's'
-                #wordArray.append(pluralCountn)
                 wordArray[num1] = pluralCountn
 	elif word == 'article':
 		#count noun
@@ -66,6 +65,7 @@ while wordCounter <= totalWords:
 			articleCountn = 'an ' + countn
 		else:
 			articleCountn = 'a ' + countn
+		wordArray[num1] = articleCountn
         wordCounter = wordCounter + 1
         num1 = num1 + 1
 for s in wordArray:
