@@ -7,6 +7,7 @@ from array import *
 
 totalWordsGenerator = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 countnGenerator = ['book', 'diary', 'laptop', 'movie', 'remote', 'shoe', 'backpack', 'paper', 'clock', 'word', 'program', 'sheet', 'exam', 'sock']
+verbGenerator = ['make', 'hope', 'have', 'get', 'feel', 'like', 'steal', 'glitch', 'do', 'prosper', 'survive', 'stop', 'go', 'recite', 'tell', 'say', 'play', 'keep', 'crash', 'ruin', 'trust', 'use', 'find', 'leave', 'chill', 'practice', 'finish', 'draw', 'write']
 
 totalWords = random.choice(totalWordsGenerator)
 wordCounter = 1
@@ -17,14 +18,14 @@ num1 = 0
 #words = 0
 
 while wordCounter <= totalWords:
-        wordGenerator = ['count noun', 'plural', 'article']
+        wordGenerator = ['count noun', 'plural noun', 'article noun']
         word = random.choice(wordGenerator)
         if word == 'count noun':
                 #count noun
                 countn = random.choice(countnGenerator)
                 #wordArray.append(countn)
                 wordArray[num1] = countn
-        elif word == 'plural':
+        elif word == 'plural noun':
                 #count noun
                 countn = random.choice(countnGenerator)
                 #plural count noun
@@ -57,7 +58,7 @@ while wordCounter <= totalWords:
                 else:
                         pluralCountn = countn + 's'
                 wordArray[num1] = pluralCountn
-	elif word == 'article':
+	elif word == 'article noun':
 		#count noun
 		countn = random.choice(countnGenerator)
 		#article noun
@@ -66,6 +67,20 @@ while wordCounter <= totalWords:
 		else:
 			articleCountn = 'a ' + countn
 		wordArray[num1] = articleCountn
+	elif word == 'regular past tense verb':
+		#verb
+		verb = random.choice(verbGenerator)
+		#regular past tense verb
+		if verb[-1] == 'e':
+			regularPastVerb = verb + 'd'
+		elif verb[-1] == 'y' and verb[-2] != 'a' and verb[-2] != 'e' and verb[-2] != 'i' and verb[-2] != 'o' and verb[-2] != 'u':
+			regularPastVerb = verb[:-1] + 'ed'
+		#rule 5
+		#rule 7
+		#rule 8
+		else:
+			regularPastVerb = verb + 'ed'
+		wordArray[num1] = regularPastVerb
         wordCounter = wordCounter + 1
         num1 = num1 + 1
 for s in wordArray:
