@@ -35,7 +35,7 @@ while wordCounter <= totalWords:
 		wordGenerator = ['article noun', 'plural noun', 'the', 'negative', ',', 'pronoun']
 		word = random.choice(wordGenerator)
 	elif (previous == 'verb' or previous == 'regular past tense verb'):
-		wordGenerator = ['plural noun', 'pronoun']
+		wordGenerator = ['plural noun', 'pronoun', 'stop']
 		word = random.choice(wordGenerator)
 	#comma
 	elif previous == ',':
@@ -138,6 +138,8 @@ while wordCounter <= totalWords:
 	elif word == 'negative':
 		negative = random.choice(negativeGenerator)
 		wordArray[num1] = negative
+	elif word == 'stop':
+		wordCounter = totalWords + 1
 	previous = word
         wordCounter = wordCounter + 1
         num1 = num1 + 1
