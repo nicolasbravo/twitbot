@@ -22,14 +22,14 @@ while wordCounter <= totalWords:
 	if previous == 'count noun' or previous == 'plural noun':
 		wordGenerator = ['regular past tense verb']
 	elif previous == 'the':
-		wordGenerator = ['count noun', 'plural noun', 'verb']
+		wordGenerator = ['count noun', 'plural noun']
 	else:
         	wordGenerator = ['plural noun', 'article noun', 'the', 'verb']
         word = random.choice(wordGenerator)
         if word == 'count noun':
                 #count noun
                 countn = random.choice(countnGenerator)
-                wordArray[num1] = countn
+                wordArray[num1] = " " + countn
         elif word == 'plural noun':
                 #count noun
                 countn = random.choice(countnGenerator)
@@ -62,7 +62,7 @@ while wordCounter <= totalWords:
                         pluralCountn = countn[:-4] + 'ice'
                 else:
                         pluralCountn = countn + 's'
-                wordArray[num1] = pluralCountn
+                wordArray[num1] = " " + pluralCountn
 	elif word == 'article noun':
 		#count noun
 		countn = random.choice(countnGenerator)
@@ -71,11 +71,11 @@ while wordCounter <= totalWords:
 			articleCountn = 'an ' + countn
 		else:
 			articleCountn = 'a ' + countn
-		wordArray[num1] = articleCountn
+		wordArray[num1] = " " + articleCountn
 	elif word == 'verb':
 		#verb
 		verb = random.choice(verbGenerator)
-		wordArray[num1] = verb
+		wordArray[num1] = " " + verb
 	elif word == 'regular past tense verb':
 		#verb
 		verb = random.choice(verbGenerator)
@@ -89,14 +89,16 @@ while wordCounter <= totalWords:
 		#rule 8
 		else:
 			regularPastVerb = verb + 'ed'
-		wordArray[num1] = regularPastVerb
+		wordArray[num1] = " " + regularPastVerb
 	elif word == 'the':
-		wordArray[num1] = 'the'
+		wordArray[num1] = ' the'
+	elif word == ',':
+		wordArray[num1] = ','
 	previous = word
         wordCounter = wordCounter + 1
         num1 = num1 + 1
 for s in wordArray:
-        tweetStr = tweetStr + " " + wordArray[s]
+        tweetStr = tweetStr + wordArray[s]
 tweetStr = tweetStr[1:]
 print(tweetStr)
 print(140 - len(tweetStr))
