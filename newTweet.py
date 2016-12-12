@@ -19,10 +19,19 @@ previous = ""
 #words = 0
 
 while wordCounter <= totalWords:
+	#count noun or plural noun
 	if previous == 'count noun' or previous == 'plural noun':
 		wordGenerator = ['regular past tense verb']
+	#the
 	elif previous == 'the':
 		wordGenerator = ['count noun', 'plural noun']
+	#verb
+	elif (previous == 'verb' or previous == 'regular past tense verb') and len(wordArray) <= 18:
+		wordGenerator = ['article noun', 'plural noun']
+	elif (previous == 'verb' or previous == 'regular past tense verb'):
+		wordGenerator = ['the', 'plural noun']
+	#comma
+	#beginning of sentence
 	else:
         	wordGenerator = ['plural noun', 'article noun', 'the', 'verb']
         word = random.choice(wordGenerator)
