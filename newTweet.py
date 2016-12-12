@@ -17,14 +17,14 @@ num1 = 0
 #words = 0
 
 while wordCounter <= totalWords:
-        wordGenerator = ['countn', 'plural countn']
+        wordGenerator = ['count noun', 'plural', 'article']
         word = random.choice(wordGenerator)
-        if word == 'countn':
+        if word == 'count noun':
                 #count noun
                 countn = random.choice(countnGenerator)
                 #wordArray.append(countn)
                 wordArray[num1] = countn
-        elif word == 'plural countn':
+        elif word == 'plural':
                 #count noun
                 countn = random.choice(countnGenerator)
                 #plural count noun
@@ -58,6 +58,14 @@ while wordCounter <= totalWords:
                         pluralCountn = countn + 's'
                 #wordArray.append(pluralCountn)
                 wordArray[num1] = pluralCountn
+	elif word == 'article':
+		#count noun
+		countn = random.choice(countnGenerator)
+		#article noun
+		if countn[0] == 'a' or countn[0] == 'e' or countn[0] == 'i' or countn[0] == 'o' or countn[0] == 'u':
+			articleCountn = 'an ' + countn
+		else:
+			articleCountn = 'a ' + countn
         wordCounter = wordCounter + 1
         num1 = num1 + 1
 for s in wordArray:
