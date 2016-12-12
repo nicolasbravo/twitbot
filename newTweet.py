@@ -48,7 +48,7 @@ while wordCounter <= totalWords:
                         pluralCountn = countn[:-2] + 'a'
                 elif countn == 'person':
                         pluralCountn = 'people'
-                elif countn[1] == 'o' and countn[2] == 'o':
+                elif countn[1] == 'o' and countn[2] == 'o' and countn != 'book':
                         pluralCountn = countn.replace('o', 'e', 2)
                 elif countn[-1] == 'a':
                         pluralCountn = countn + 'e'
