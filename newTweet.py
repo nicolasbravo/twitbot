@@ -2,7 +2,7 @@
 import sys
 import string
 import random
-from twython import Twython
+#from twython import Twython
 from array import *
 
 totalWordsGenerator = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
@@ -11,6 +11,7 @@ verbGenerator = ['make', 'hope', 'have', 'get', 'feel', 'like', 'steal', 'glitch
 pronounGenerator = ['I', 'you', 'he', 'she']
 conjunctionGenerator = ['and', 'but', 'or']
 negativeGenerator = ['', ' not']
+adjectiveGenerator = ['bad', 'late', 'official', 'happy', 'educational', 'entire', 'random', 'fun', 'stupid', 'serious', 'better', 'pretty', 'boring', 'nice', 'problematic', 'real', 'scary', 'sorry']
 
 totalWords = random.choice(totalWordsGenerator)
 wordCounter = 1
@@ -18,13 +19,15 @@ wordArray = {1 : '', 2 : '', 3 : '', 4 : '', 5 : '', 6 : '', 7 : '', 8 : '', 9 :
 tweetStr = ""
 num1 = 0
 previous = ""
+stopBoolean = False
 
 #words = 0
 
-while wordCounter <= totalWords:
+#while wordCounter <= totalWords:
+while stopBoolean == False:
 	#count noun or plural noun
 	if previous == 'count noun' or previous == 'plural noun':
-		wordGenerator = ['regular past tense verb', ',']
+		wordGenerator = ['regular past tense verb', ',', 'stop', 'verb']
 		word = random.choice(wordGenerator)
 	#the
 	elif previous == 'the':
@@ -35,7 +38,7 @@ while wordCounter <= totalWords:
 		wordGenerator = ['article noun', 'plural noun', 'the', 'negative', ',', 'pronoun']
 		word = random.choice(wordGenerator)
 	elif (previous == 'verb' or previous == 'regular past tense verb'):
-		wordGenerator = ['plural noun', 'pronoun', 'stop']
+		wordGenerator = ['plural noun', 'pronoun', 'stop', 'count noun', 'adjective']
 		word = random.choice(wordGenerator)
 	#comma
 	elif previous == ',':
@@ -51,16 +54,21 @@ while wordCounter <= totalWords:
 		word = random.choice(wordGenerator)
 	#negative
 	elif previous == 'negative':
-		wordGenerator = ['verb']
+		wordGenerator = ['verb', 'adjective']
 		word = random.choice(wordGenerator)
 	#article
 	elif previous == 'article noun':
 		wordGenerator = ['regular past tense verb']
 		word = random.choice(wordGenerator)
+	#adjective
+	elif previous == 'adjective':
+		wordGenerator = ['plural noun']
+		word = random.choice(wordGenerator)
 	#beginning of sentence
 	else:
         	wordGenerator = ['plural noun', 'article noun', 'the', 'verb', 'pronoun']
 		word = random.choice(wordGenerator)
+	#start word generation
         if word == 'count noun':
                 #count noun
                 countn = random.choice(countnGenerator)
@@ -139,7 +147,11 @@ while wordCounter <= totalWords:
 		negative = random.choice(negativeGenerator)
 		wordArray[num1] = negative
 	elif word == 'stop':
-		wordCounter = totalWords + 1
+		#wordCounter = totalWords + 1
+		stopBoolean = True
+	elif word == 'adjective':
+		adjective = random.choice(adjectiveGenerator)
+		wordArray[num1] = " " + adjective
 	previous = word
         wordCounter = wordCounter + 1
         num1 = num1 + 1
