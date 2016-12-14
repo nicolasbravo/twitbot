@@ -12,7 +12,7 @@ pronounGenerator = ['I', 'you', 'he', 'she']
 conjunctionGenerator = ['and', 'but', 'or']
 negativeGenerator = ['', ' not']
 adjectiveGenerator = ['bad', 'late', 'official', 'happy', 'educational', 'entire', 'random', 'fun', 'stupid', 'serious', 'better', 'pretty', 'boring', 'nice', 'problematic', 'real', 'scary', 'sorry']
-pastTense = False
+verbTense = ""
 
 totalWords = random.choice(totalWordsGenerator)
 wordCounter = 1
@@ -26,9 +26,17 @@ stopBoolean = False
 
 #while wordCounter <= totalWords:
 while stopBoolean == False:
-	#count noun or plural noun
-	if previous == 'count noun' or previous == 'plural noun':
-		if pastTense == True:
+	#count noun
+	if previous == 'count noun':
+		if verbTense == 'regular past tense verb':
+			wordGenerator = ['regular past tense verb', ',', 'stop']
+			word = random.choice(wordGenerator)
+		else:
+			wordGenerator = [',', 'stop', 'third person singular present verb']
+			word = random.choice(wordGenerator)
+	#plural noun
+	if previous == 'plural noun':
+		if verbTense == 'regular past tense verb':
 			wordGenerator = ['regular past tense verb', ',', 'stop']
 			word = random.choice(wordGenerator)
 		else:
@@ -39,10 +47,10 @@ while stopBoolean == False:
 		wordGenerator = ['count noun', 'plural noun']
 		word = random.choice(wordGenerator)
 	#verb
-	elif (previous == 'verb' or previous == 'regular past tense verb') and len(wordArray) <= (totalWords - 2):
+	elif (previous == 'verb' or previous == 'regular past tense verb' or previous == 'third person singular present verb') and len(wordArray) <= (totalWords - 2):
 		wordGenerator = ['article noun', 'plural noun', 'the', 'negative', ',', 'pronoun']
 		word = random.choice(wordGenerator)
-	elif (previous == 'verb' or previous == 'regular past tense verb'):
+	elif (previous == 'verb' or previous == 'regular past tense verb' or previous == 'third person singular present verb'):
 		wordGenerator = ['plural noun', 'pronoun', 'stop', 'count noun', 'adjective']
 		word = random.choice(wordGenerator)
 	#comma
@@ -51,7 +59,7 @@ while stopBoolean == False:
 		word = random.choice(wordGenerator)
 	#conjuction
 	elif previous == 'conjunction':
-		if pastTense == True:
+		if verbTense == 'regular past tense verb':
 			wordGenerator = ['count noun', 'plural noun', 'regular past tense verb', 'pronoun']
 			word = random.choice(wordGenerator)
 		else:
@@ -59,15 +67,15 @@ while stopBoolean == False:
 			word = random.choice(wordGenerator)
 	#pronoun
 	elif previous == 'pronoun':
-		if pastTense == True:
+		if verbTense == 'regular past tense verb':
 			wordGenerator = ['regular past tense verb']
 			word = random.choice(wordGenerator)
 		else:
-			wordGenerator = ['verb']
+			wordGenerator = ['third person singular present verb']
 			word = random.choice(wordGenerator)
 	#negative
 	elif previous == 'negative':
-		if pastTense == True:
+		if verbTense == 'regular past tense verb':
 			wordGenerator = ['regular past tense verb', 'adjective']
 			word = random.choice(wordGenerator)
 		else:
@@ -75,7 +83,7 @@ while stopBoolean == False:
 			word = random.choice(wordGenerator)
 	#article
 	elif previous == 'article noun':
-		if pastTense == True:
+		if verbTense == 'regular past tense verb':
 			wordGenerator = ['regular past tense verb']
 			word = random.choice(wordGenerator)
 		else:
@@ -85,6 +93,9 @@ while stopBoolean == False:
 	elif previous == 'adjective':
 		wordGenerator = ['plural noun']
 		word = random.choice(wordGenerator)
+	#third person singular present verb
+	elif previous == 'third person singular present verb':
+		wordGenerator = ['plural noun', 'noun']
 	#beginning of sentence
 	else:
         	wordGenerator = ['plural noun', 'article noun', 'the', 'verb', 'pronoun']
@@ -140,7 +151,7 @@ while stopBoolean == False:
 		#verb
 		verb = random.choice(verbGenerator)
 		wordArray[num1] = " " + verb
-		pastTense = False
+		verbTense = 'verb'
 	elif word == 'regular past tense verb':
 		#verb
 		verb = random.choice(verbGenerator)
@@ -155,7 +166,7 @@ while stopBoolean == False:
 		else:
 			regularPastVerb = verb + 'ed'
 		wordArray[num1] = " " + regularPastVerb
-		pastTense = True
+		verbTense = 'regular past tense verb'
 	elif word == 'the':
 		wordArray[num1] = ' the'
 	elif word == ',':
@@ -175,6 +186,18 @@ while stopBoolean == False:
 	elif word == 'adjective':
 		adjective = random.choice(adjectiveGenerator)
 		wordArray[num1] = " " + adjective
+	elif word == 'third person singular present verb':
+		#verb
+		verb = random.choice(verbGenerator)
+		#third person singular present verb
+		if ((verb[-1] == 's' and verb[-2] == 's') or (verb[-1] == 'z' and verb[-2] == 'z') or (verb[-1] == 'h' and verb[-2] == 's') or (verb[-1] == 'i' and verb[-2] == 's') or (verb[-1] == 'h' and verb[-2] == 'c') or verb[-1] == 'j') or (verb[-1] == 'o' and verb[-2] != 'a' and verb[-2] != 'e' and verb[-2] != 'i' and verb[-2] != 'o' and verb[-2] != 'u'):
+			thirdPresentVerb = verb + 'es'
+		elif verb[-1] == 'y' and verb[-2] != 'a' and verb[-2] != 'e' and verb[-2] != 'i' and verb[-2] != 'o' and verb[-2] != 'u':
+			thirdPresentVerb = verb[:-1] + 'ies'
+		else:
+			thirdPresentVerb = verb + 's'
+		previous = 'third person singular present verb'
+		wordArray[num1] = " " + thirdPresentVerb
 	previous = word
         wordCounter = wordCounter + 1
         num1 = num1 + 1
