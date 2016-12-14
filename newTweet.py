@@ -87,7 +87,7 @@ while stopBoolean == False:
 			wordGenerator = ['regular past tense verb']
 			word = random.choice(wordGenerator)
 		else:
-			wordGenerator = ['verb']
+			wordGenerator = ['third person singular present verb']
 			word = random.choice(wordGenerator)
 	#adjective
 	elif previous == 'adjective':
