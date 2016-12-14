@@ -215,5 +215,8 @@ while stopBoolean == False:
 for s in wordArray:
         tweetStr = tweetStr + wordArray[s]
 tweetStr = tweetStr[1:]
+while tweetStr > 140:
+	space = tweetStr.rfind(" ")
+	tweetStr = tweetStr[:space]
 print(tweetStr)
 print(140 - len(tweetStr))
