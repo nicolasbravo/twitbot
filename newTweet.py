@@ -22,13 +22,20 @@ tweetStr = ""
 num1 = 0
 previous = ""
 stopBoolean = False
+nounBoolean = False
+verbBoolean = False
 
 #words = 0
 
 #while wordCounter <= totalWords:
 while stopBoolean == False:
+	#simple sentence
+	if nounBoolean == True and verbBoolean == True:
+		wordGenerator = ['conjunction', 'stop']
+		word = random.choice(wordGenerator)
 	#count noun
 	if previous == 'count noun':
+		nounBoolean = True
 		if verbTense == 'regular past tense verb':
 			wordGenerator = ['regular past tense verb', 'punctuation', 'stop']
 			word = random.choice(wordGenerator)
@@ -37,6 +44,7 @@ while stopBoolean == False:
 			word = random.choice(wordGenerator)
 	#plural noun
 	if previous == 'plural noun':
+		nounBoolean = True
 		if verbTense == 'regular past tense verb':
 			wordGenerator = ['regular past tense verb', 'punctuation', 'stop']
 			word = random.choice(wordGenerator)
@@ -49,9 +57,11 @@ while stopBoolean == False:
 		word = random.choice(wordGenerator)
 	#verb
 	elif (previous == 'verb' or previous == 'regular past tense verb' or previous == 'third person singular present verb') and len(wordArray) <= (totalWords - 2):
+		verbBoolean = True
 		wordGenerator = ['article noun', 'plural noun', 'the', 'negative', 'punctuation', 'third person pronoun']
 		word = random.choice(wordGenerator)
 	elif (previous == 'verb' or previous == 'regular past tense verb' or previous == 'third person singular present verb'):
+		verbBoolean = True
 		wordGenerator = ['plural noun', 'third person pronoun', 'stop', 'count noun', 'adjective']
 		word = random.choice(wordGenerator)
 	#comma
@@ -60,6 +70,8 @@ while stopBoolean == False:
 		word = random.choice(wordGenerator)
 	#conjuction
 	elif previous == 'conjunction':
+		nounBoolean = False
+		verbBoolean = False
 		if verbTense == 'regular past tense verb':
 			wordGenerator = ['count noun', 'plural noun', 'regular past tense verb', 'third person pronoun']
 			word = random.choice(wordGenerator)
