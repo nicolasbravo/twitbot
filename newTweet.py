@@ -6,8 +6,10 @@ import random
 from array import *
 
 totalWordsGenerator = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-countnGenerator = ['book', 'diary', 'laptop', 'movie', 'remote', 'shoe', 'backpack', 'paper', 'clock', 'word', 'program', 'sheet', 'exam', 'sock', 'phone', 'computer', 'dog', 'day', 'work', 'video', 'life', 'game', 'meme', 'boy', 'number', 'person', 'director', 'firm', 'drill', 'mustache', 'garden', 'fence', 'neighbor']
-verbGenerator = ['make', 'hope', 'have', 'get', 'feel', 'like', 'steal', 'glitch', 'do', 'prosper', 'survive', 'stop', 'go', 'recite', 'tell', 'say', 'play', 'keep', 'crash', 'ruin', 'trust', 'use', 'find', 'leave', 'chill', 'practice', 'finish', 'draw', 'write', 'expect', 'spy']
+ncountnGenerator = ['tennis']
+countnGenerator = ['book', 'diary', 'laptop', 'movie', 'remote', 'shoe', 'backpack', 'paper', 'clock', 'word', 'program', 'sheet', 'exam', 'sock', 'phone', 'computer', 'dog', 'day', 'work', 'video', 'life', 'game', 'meme', 'boy', 'number', 'person', 'director', 'firm', 'drill', 'mustache', 'garden', 'fence', 'neighbor', 'outlet', 'table']
+nounGenerator = ncountnGenerator + countnGenerator
+verbGenerator = ['make', 'hope', 'have', 'get', 'feel', 'like', 'steal', 'glitch', 'do', 'prosper', 'survive', 'stop', 'go', 'recite', 'tell', 'say', 'play', 'keep', 'crash', 'ruin', 'trust', 'use', 'find', 'leave', 'chill', 'practice', 'finish', 'draw', 'write', 'expect', 'spy', 'destroy', 'watch', 'type']
 thirdPronounGenerator = ['he', 'she', 'it']
 personalPronounGenerator = ['I', 'you', 'we', 'they']
 conjunctionGenerator = ['and', 'but', 'or']
@@ -24,7 +26,9 @@ previous = ""
 stopBoolean = False
 nounBoolean = False
 verbBoolean = False
-
+commaCounter = 0
+periodBoolean = False
+commaTracker = 0
 #words = 0
 
 #while wordCounter <= totalWords:
@@ -33,23 +37,28 @@ while stopBoolean == False:
 	if nounBoolean == True and verbBoolean == True:
 		wordGenerator = ['conjunction', 'stop']
 		word = random.choice(wordGenerator)
-	#count noun
-	if previous == 'count noun':
-		nounBoolean = True
+	elif previous == 'noun':
 		if verbTense == 'regular past tense verb':
-			wordGenerator = ['regular past tense verb', 'punctuation', 'stop']
+			wordGenerator = ['regular past tense verb', 'punctuation']
 			word = random.choice(wordGenerator)
 		else:
-			wordGenerator = ['punctuation', 'stop', 'third person singular present verb']
+			wordGenerator = ['punctuation', 'third person singular present verb']
+			word = random.choice(wordGenerator)
+	#count noun
+	elif previous == 'count noun':
+		if verbTense == 'regular past tense verb':
+			wordGenerator = ['regular past tense verb', 'punctuation']
+			word = random.choice(wordGenerator)
+		else:
+			wordGenerator = ['punctuation', 'third person singular present verb']
 			word = random.choice(wordGenerator)
 	#plural noun
-	if previous == 'plural noun':
-		nounBoolean = True
+	elif previous == 'plural noun':
 		if verbTense == 'regular past tense verb':
-			wordGenerator = ['regular past tense verb', 'punctuation', 'stop']
+			wordGenerator = ['regular past tense verb', 'punctuation']
 			word = random.choice(wordGenerator)
 		else:
-			wordGenerator = ['punctuation', 'stop', 'verb']
+			wordGenerator = ['punctuation', 'verb']
 			word = random.choice(wordGenerator)
 	#the
 	elif previous == 'the':
@@ -57,12 +66,10 @@ while stopBoolean == False:
 		word = random.choice(wordGenerator)
 	#verb
 	elif (previous == 'verb' or previous == 'regular past tense verb' or previous == 'third person singular present verb') and len(wordArray) <= (totalWords - 2):
-		verbBoolean = True
 		wordGenerator = ['article noun', 'plural noun', 'the', 'negative', 'punctuation', 'third person pronoun']
 		word = random.choice(wordGenerator)
 	elif (previous == 'verb' or previous == 'regular past tense verb' or previous == 'third person singular present verb'):
-		verbBoolean = True
-		wordGenerator = ['plural noun', 'third person pronoun', 'stop', 'count noun', 'adjective']
+		wordGenerator = ['plural noun', 'third person pronoun', 'noun', 'adjective']
 		word = random.choice(wordGenerator)
 	#comma
 	elif previous == 'punctuation':
@@ -70,13 +77,11 @@ while stopBoolean == False:
 		word = random.choice(wordGenerator)
 	#conjuction
 	elif previous == 'conjunction':
-		nounBoolean = False
-		verbBoolean = False
 		if verbTense == 'regular past tense verb':
-			wordGenerator = ['count noun', 'plural noun', 'regular past tense verb', 'third person pronoun']
+			wordGenerator = ['noun', 'plural noun', 'regular past tense verb', 'third person pronoun']
 			word = random.choice(wordGenerator)
 		else:
-			wordGenerator = ['count noun', 'plural noun', 'verb', 'third person pronoun']
+			wordGenerator = ['noun', 'plural noun', 'verb', 'third person pronoun']
 			word = random.choice(wordGenerator)
 	#pronoun
 	elif previous == 'third person pronoun':
@@ -104,7 +109,7 @@ while stopBoolean == False:
 			word = random.choice(wordGenerator)
 	#adjective
 	elif previous == 'adjective':
-		wordGenerator = ['plural noun']
+		wordGenerator = ['plural noun', 'noun']
 		word = random.choice(wordGenerator)
 	#third person singular present verb
 	elif previous == 'third person singular present verb':
@@ -121,11 +126,18 @@ while stopBoolean == False:
         	wordGenerator = ['plural noun', 'article noun', 'the', 'verb', 'third person pronoun']
 		word = random.choice(wordGenerator)
 	#start word generation
-        if word == 'count noun':
-                #count noun
-                countn = random.choice(countnGenerator)
-                wordArray[num1] = " " + countn
+        if word == 'noun':
+		nounBoolean = True
+                #noun
+                noun = random.choice(nounGenerator)
+                wordArray[num1] = " " + noun
+	elif word == 'count noun':
+		nounBoolean = True
+		#count noun
+		countn = random.choice(countnGenerator)
+		wordArray[num1] = " " + countn
         elif word == 'plural noun':
+		nounBoolean = True
                 #count noun
                 countn = random.choice(countnGenerator)
                 #plural count noun
@@ -159,6 +171,7 @@ while stopBoolean == False:
                         pluralCountn = countn + 's'
                 wordArray[num1] = " " + pluralCountn
 	elif word == 'article noun':
+		nounBoolean = True
 		#count noun
 		countn = random.choice(countnGenerator)
 		#article noun
@@ -168,11 +181,13 @@ while stopBoolean == False:
 			articleCountn = 'a ' + countn
 		wordArray[num1] = " " + articleCountn
 	elif word == 'verb':
+		verbBoolean = True
 		#verb
 		verb = random.choice(verbGenerator)
 		wordArray[num1] = " " + verb
 		verbTense = 'verb'
 	elif word == 'regular past tense verb':
+		verbBoolean = True
 		#verb
 		verb = random.choice(verbGenerator)
 		#regular past tense verb
@@ -190,13 +205,28 @@ while stopBoolean == False:
 	elif word == 'the':
 		wordArray[num1] = ' the'
 	elif word == 'punctuation':
-		wordArray[num1] = '.'
+		for x in wordArray:
+			if wordArray[x] == '.':
+				periodBoolean = True
+		if periodBoolean == True:
+			stopBoolean = True
+		else:
+			wordArray[num1] = '.'
 	elif word == 'third person pronoun':
+		nounBoolean = True
 		thirdPronoun = random.choice(thirdPronounGenerator)
 		wordArray[num1] = " " + thirdPronoun
 	elif word == 'conjunction':
+		nounBoolean = False
+		verbBoolean = False
 		num2 = num1 - 1
-		wordArray[num2] = ","
+		for x in wordArray:
+			if wordArray[x] == ',':
+				commaCounter = commaCounter + 1
+			if commaCounter < 2:
+				wordArray[num2] = ","
+			else:
+				wordArray[num2] = "."
 		conjunction = random.choice(conjunctionGenerator)
 		wordArray[num1] = " " + conjunction
 	elif word == 'negative':
@@ -209,6 +239,7 @@ while stopBoolean == False:
 		adjective = random.choice(adjectiveGenerator)
 		wordArray[num1] = " " + adjective
 	elif word == 'third person singular present verb':
+		verbBoolean = True
 		#verb
 		verb = random.choice(verbGenerator)
 		#third person singular present verb
@@ -221,11 +252,20 @@ while stopBoolean == False:
 		previous = 'third person singular present verb'
 		wordArray[num1] = " " + thirdPresentVerb
 	elif word == 'personal pronoun':
+		nounBoolean = True
 		personalPronoun = random.choice(personalPronounGenerator)
 		wordArray[num1] = " " + personalPronoun
 	previous = word
         wordCounter = wordCounter + 1
         num1 = num1 + 1
+for n in wordArray:
+	if wordArray[n] == ','
+		nTracker = n
+		commaTracker = commaTracker + 1
+if commaTracker == 1:
+	nplusone = nTracker + 1
+	if wordArray[nplusone] == 'and' or wordArray[nplusone] == 'or' or wordArray[nplusone] == 'but':
+		wordArray[nTracker] = ''
 for s in wordArray:
         tweetStr = tweetStr + wordArray[s]
 tweetStr = tweetStr[1:]
