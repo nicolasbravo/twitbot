@@ -355,7 +355,7 @@ elif randomSentence == 'tracer':
 	elif tracer == '2':
 		tweetStr = "Tracer: Keep Calm And " + randomProperNoun + " On"
 	elif tracer == '3':
-		tweetStr = "Tracer: She " + randomPresentNoun + ", She " + randomPresentNoun2 + "!"
+		tweetStr = "Tracer: She " + randomPresentVerb + ", She " + randomPresentVerb2 + "!"
 	elif tracer == '4':
 		tweetStr = "Tracer: The World Could Always Use More " + randomPluralNoun
 	elif tracer == '5':
