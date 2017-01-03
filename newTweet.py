@@ -31,6 +31,7 @@ commaCounter = 0
 periodBoolean = False
 #commaTracker = 0
 dependentBoolean = False
+conjunctionBoolean = False
 #words = 0
 
 #while wordCounter <= totalWords:
@@ -229,6 +230,7 @@ while stopBoolean == False:
 	elif word == 'conjunction':
 		nounBoolean = False
 		verbBoolean = False
+		conjunctionBoolean = True
 		#num2 = num1 - 1
 		#for x in wordArray:
 		#	if wordArray[x] == ',':
