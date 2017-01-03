@@ -16,6 +16,7 @@ conjunctionGenerator = ['and', 'but', 'or']
 negativeGenerator = ['', ' not']
 adjectiveGenerator = ['bad', 'late', 'official', 'happy', 'educational', 'entire', 'random', 'fun', 'stupid', 'serious', 'better', 'pretty', 'boring', 'nice', 'problematic', 'real', 'scary', 'sorry', 'normal', 'perfect', 'strange', 'mysterious', 'small', 'large']
 verbTense = ""
+dependentGenerator = ['when', 'because']
 
 totalWords = random.choice(totalWordsGenerator)
 wordCounter = 1
@@ -28,15 +29,24 @@ nounBoolean = False
 verbBoolean = False
 commaCounter = 0
 periodBoolean = False
-commaTracker = 0
+#commaTracker = 0
+dependentBoolean = False
 #words = 0
 
 #while wordCounter <= totalWords:
 while stopBoolean == False:
 	#simple sentence
-	if nounBoolean == True and verbBoolean == True:
+	if nounBoolean == True and verbBoolean == True and dependentBoolean == False and conjunctionBoolean == False:
+		wordGenerator = ['conjunction', 'stop', 'dependent']
+		word = random.choice(wordGenerator)
+	elif nounBoolean == True and verbBoolean == True and dependentBoolean == True and conjunctionBoolean == False:
 		wordGenerator = ['conjunction', 'stop']
 		word = random.choice(wordGenerator)
+	elif nounBoolean == True and verbBoolean == True and dependentBoolean == False and conjunctionBoolean == True:
+		wordGenerator = ['stop', 'dependent']
+		word = random.choice(wordGenerator)
+	elif nounBoolean == True and verbBoolean == True and dependentBoolean == True and conjunctionBoolean == True:
+		word = 'stop'
 	elif previous == 'noun':
 		if verbTense == 'regular past tense verb':
 			wordGenerator = ['regular past tense verb', 'punctuation']
@@ -75,8 +85,8 @@ while stopBoolean == False:
 	elif previous == 'punctuation':
 		wordGenerator = ['conjunction', 'third person pronoun']
 		word = random.choice(wordGenerator)
-	#conjuction
-	elif previous == 'conjunction':
+	#conjuction or dependent clause
+	elif previous == 'conjunction' or previous == 'dependent':
 		if verbTense == 'regular past tense verb':
 			wordGenerator = ['noun', 'plural noun', 'regular past tense verb', 'third person pronoun']
 			word = random.choice(wordGenerator)
@@ -219,16 +229,22 @@ while stopBoolean == False:
 	elif word == 'conjunction':
 		nounBoolean = False
 		verbBoolean = False
-		num2 = num1 - 1
-		for x in wordArray:
-			if wordArray[x] == ',':
-				commaCounter = commaCounter + 1
-			if commaCounter < 2:
-				wordArray[num2] = ","
-			else:
-				wordArray[num2] = "."
+		#num2 = num1 - 1
+		#for x in wordArray:
+		#	if wordArray[x] == ',':
+		#		commaCounter = commaCounter + 1
+		#	if commaCounter < 2:
+		#		wordArray[num2] = ","
+		#	else:
+		#		wordArray[num2] = "."
 		conjunction = random.choice(conjunctionGenerator)
 		wordArray[num1] = " " + conjunction
+	elif word == 'dependent':
+		nounBoolean = False
+		verbBoolean = False
+		dependentBoolean = True
+		dependent = random.choice(dependentGenerator)
+		wordArray[num1] = " " + dependent
 	elif word == 'negative':
 		negative = random.choice(negativeGenerator)
 		wordArray[num1] = negative
@@ -258,14 +274,14 @@ while stopBoolean == False:
 	previous = word
         wordCounter = wordCounter + 1
         num1 = num1 + 1
-for n in wordArray:
-	if wordArray[n] == ','
-		nTracker = n
-		commaTracker = commaTracker + 1
-if commaTracker == 1:
-	nplusone = nTracker + 1
-	if wordArray[nplusone] == 'and' or wordArray[nplusone] == 'or' or wordArray[nplusone] == 'but':
-		wordArray[nTracker] = ''
+#for n in wordArray:
+#	if wordArray[n] == ','
+#		nTracker = n
+#		commaTracker = commaTracker + 1
+#if commaTracker == 1:
+#	nplusone = nTracker + 1
+#	if wordArray[nplusone] == 'and' or wordArray[nplusone] == 'or' or wordArray[nplusone] == 'but':
+#		wordArray[nTracker] = ''
 for s in wordArray:
         tweetStr = tweetStr + wordArray[s]
 tweetStr = tweetStr[1:]
