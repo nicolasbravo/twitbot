@@ -50,26 +50,32 @@ while stopBoolean == False:
 		word = 'stop'
 	elif previous == 'noun':
 		if verbTense == 'regular past tense verb':
-			wordGenerator = ['regular past tense verb', 'punctuation']
+			#wordGenerator = ['regular past tense verb', 'punctuation']
+			wordGenerator = ['regular past tense verb', 'stop']
 			word = random.choice(wordGenerator)
 		else:
-			wordGenerator = ['punctuation', 'third person singular present verb']
+			#wordGenerator = ['punctuation', 'third person singular present verb']
+			wordGenerator = ['stop', 'third person singular present verb']
 			word = random.choice(wordGenerator)
 	#count noun
 	elif previous == 'count noun':
 		if verbTense == 'regular past tense verb':
-			wordGenerator = ['regular past tense verb', 'punctuation']
+			#wordGenerator = ['regular past tense verb', 'punctuation']
+			wordGenerator = ['regular past tense verb', 'stop']
 			word = random.choice(wordGenerator)
 		else:
-			wordGenerator = ['punctuation', 'third person singular present verb']
+			#wordGenerator = ['punctuation', 'third person singular present verb']
+			wordGenerator = ['stop', 'third person singular present verb']
 			word = random.choice(wordGenerator)
 	#plural noun
 	elif previous == 'plural noun':
 		if verbTense == 'regular past tense verb':
-			wordGenerator = ['regular past tense verb', 'punctuation']
+			#wordGenerator = ['regular past tense verb', 'punctuation']
+			wordGenerator = ['regular past tense verb', 'stop']
 			word = random.choice(wordGenerator)
 		else:
-			wordGenerator = ['punctuation', 'verb']
+			#wordGenerator = ['punctuation', 'verb']
+			wordGenerator = ['stop', 'verb']
 			word = random.choice(wordGenerator)
 	#the
 	elif previous == 'the':
@@ -77,15 +83,16 @@ while stopBoolean == False:
 		word = random.choice(wordGenerator)
 	#verb
 	elif (previous == 'verb' or previous == 'regular past tense verb' or previous == 'third person singular present verb') and len(wordArray) <= (totalWords - 2):
-		wordGenerator = ['article noun', 'plural noun', 'the', 'negative', 'punctuation', 'third person pronoun']
+		#wordGenerator = ['article noun', 'plural noun', 'the', 'negative', 'punctuation', 'third person pronoun']
+		wordGenerator = ['article noun', 'plural noun', 'the', 'negative', 'stop', 'third person pronoun']
 		word = random.choice(wordGenerator)
 	elif (previous == 'verb' or previous == 'regular past tense verb' or previous == 'third person singular present verb'):
 		wordGenerator = ['plural noun', 'third person pronoun', 'noun', 'adjective']
 		word = random.choice(wordGenerator)
 	#comma
-	elif previous == 'punctuation':
-		wordGenerator = ['conjunction', 'third person pronoun']
-		word = random.choice(wordGenerator)
+	#elif previous == 'punctuation':
+	#	wordGenerator = ['conjunction', 'third person pronoun']
+	#	word = random.choice(wordGenerator)
 	#conjuction or dependent clause
 	elif previous == 'conjunction' or previous == 'dependent':
 		if verbTense == 'regular past tense verb':
@@ -215,14 +222,14 @@ while stopBoolean == False:
 		verbTense = 'regular past tense verb'
 	elif word == 'the':
 		wordArray[num1] = ' the'
-	elif word == 'punctuation':
-		for x in wordArray:
-			if wordArray[x] == '.':
-				periodBoolean = True
-		if periodBoolean == True:
-			stopBoolean = True
-		else:
-			wordArray[num1] = '.'
+#	elif word == 'punctuation':
+#		for x in wordArray:
+#			if wordArray[x] == '.':
+#				periodBoolean = True
+#		if periodBoolean == True:
+#			stopBoolean = True
+#		else:
+#			wordArray[num1] = '.'
 	elif word == 'third person pronoun':
 		nounBoolean = True
 		thirdPronoun = random.choice(thirdPronounGenerator)
