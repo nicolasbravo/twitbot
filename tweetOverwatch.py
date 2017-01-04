@@ -26,7 +26,7 @@ randomPluralNoun = random.choice(pluralNouns)
 heroNouns = ["Ana", "Bastion", "D.Va", "Genji", "Hanzo", "Junkrat", "Lucio", "McCree", "Mei", "Mercy", "Pharah", "Reaper", "Reinhardt", "Roadhog", "Soldier: 76", "Symmetra", "Torbjorn", "Tracer", "Widowmaker", "Winston", "Zarya", "Zenyatta"]
 randomHeroNoun = random.choice(heroNouns)
 #bastion
-bastionWords = ["Doo", "Woo", "Boo", "Doo", "Dee", "Chirr", "Dah", "Wee", "Dun", "Boop", "Dweet", "Hee", "Hoo", "Sh", "Zwee"]
+bastionWords = ["Doo", "Woo", "Boo", "Doo", "Dee", "Chirr", "Dah", "Wee", "Dun", "Boop", "Dweet", "Hee", "Hoo", "Sh", "Zwee", "Bud"]
 randomBastion1 = random.choice(bastionWords)
 randomBastion2 = random.choice(bastionWords)
 randomBastion3 = random.choice(bastionWords)
