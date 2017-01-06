@@ -32,6 +32,7 @@ periodBoolean = False
 #commaTracker = 0
 dependentBoolean = False
 conjunctionBoolean = False
+pluralBoolean = False
 #words = 0
 
 #while wordCounter <= totalWords:
@@ -145,16 +146,19 @@ while stopBoolean == False:
 		word = random.choice(wordGenerator)
 	#start word generation
         if word == 'noun':
+		pluralBoolean = False
 		nounBoolean = True
                 #noun
                 noun = random.choice(nounGenerator)
                 wordArray[num1] = " " + noun
 	elif word == 'count noun':
+		pluralBoolean = False
 		nounBoolean = True
 		#count noun
 		countn = random.choice(countnGenerator)
 		wordArray[num1] = " " + countn
         elif word == 'plural noun':
+		pluralBoolean = True
 		nounBoolean = True
                 #count noun
                 countn = random.choice(countnGenerator)
@@ -189,6 +193,7 @@ while stopBoolean == False:
                         pluralCountn = countn + 's'
                 wordArray[num1] = " " + pluralCountn
 	elif word == 'article noun':
+		pluralBoolean = False
 		nounBoolean = True
 		#count noun
 		countn = random.choice(countnGenerator)
@@ -232,7 +237,10 @@ while stopBoolean == False:
 #			wordArray[num1] = '.'
 	elif word == 'third person pronoun':
 		nounBoolean = True
-		thirdPronoun = random.choice(thirdPronounGenerator)
+		if pluralBoolean == True:
+			thirdPronoun = 'they'
+		elif pluralBoolean == False:
+			thirdPronoun = random.choice(thirdPronounGenerator)
 		wordArray[num1] = " " + thirdPronoun
 	elif word == 'conjunction':
 		nounBoolean = False
@@ -268,7 +276,11 @@ while stopBoolean == False:
 		#verb
 		verb = random.choice(verbGenerator)
 		#third person singular present verb
-		if ((verb[-1] == 's' and verb[-2] == 's') or (verb[-1] == 'z' and verb[-2] == 'z') or (verb[-1] == 'h' and verb[-2] == 's') or (verb[-1] == 'i' and verb[-2] == 's') or (verb[-1] == 'h' and verb[-2] == 'c') or verb[-1] == 'j') or (verb[-1] == 'o' and verb[-2] != 'a' and verb[-2] != 'e' and verb[-2] != 'i' and verb[-2] != 'o' and verb[-2] != 'u'):
+		#irregular
+		if verb == 'have':
+			thirdPresentVerb = 'has'
+		#regular
+		elif ((verb[-1] == 's' and verb[-2] == 's') or (verb[-1] == 'z' and verb[-2] == 'z') or (verb[-1] == 'h' and verb[-2] == 's') or (verb[-1] == 'i' and verb[-2] == 's') or (verb[-1] == 'h' and verb[-2] == 'c') or verb[-1] == 'j') or (verb[-1] == 'o' and verb[-2] != 'a' and verb[-2] != 'e' and verb[-2] != 'i' and verb[-2] != 'o' and verb[-2] != 'u'):
 			thirdPresentVerb = verb + 'es'
 		elif verb[-1] == 'y' and verb[-2] != 'a' and verb[-2] != 'e' and verb[-2] != 'i' and verb[-2] != 'o' and verb[-2] != 'u':
 			thirdPresentVerb = verb[:-1] + 'ies'
