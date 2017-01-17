@@ -6,16 +6,16 @@ import random
 from array import *
 
 totalWordsGenerator = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-ncountnGenerator = ['tennis', 'water', 'money', 'light', 'power', 'information', 'history', 'food']
-countnGenerator = ['book', 'diary', 'laptop', 'movie', 'remote', 'shoe', 'backpack', 'paper', 'clock', 'word', 'program', 'sheet', 'exam', 'sock', 'phone', 'computer', 'dog', 'day', 'work', 'video', 'life', 'game', 'meme', 'boy', 'number', 'person', 'director', 'firm', 'drill', 'mustache', 'garden', 'fence', 'neighbor', 'outlet', 'table', 'year', 'world', 'hand', 'child', 'eye', 'week', 'point', 'group', 'problem', 'question', 'time', 'work', 'system', 'night', 'home', 'room', 'month', 'book', 'job', 'word', 'description', 'board', 'issue', 'friend', 'car', 'city', 'idea', 'server', 'attack', 'keyboard', 'language', 'level', 'clock', 'war', 'result', 'moment', 'song', 'guitar', 'picture', 'dog', 'pet', 'enemy', 'end']
+ncountnGenerator = ['tennis', 'water', 'money', 'light', 'power', 'information', 'history', 'food', 'music', '2017', 'sleep', 'aesthetic', 'spam', 'cost', 'storage']
+countnGenerator = ['book', 'diary', 'laptop', 'movie', 'remote', 'shoe', 'backpack', 'paper', 'clock', 'word', 'program', 'sheet', 'exam', 'sock', 'phone', 'computer', 'dog', 'day', 'work', 'video', 'life', 'game', 'meme', 'boy', 'number', 'person', 'director', 'firm', 'drill', 'mustache', 'garden', 'fence', 'neighbor', 'outlet', 'table', 'year', 'world', 'hand', 'child', 'eye', 'week', 'point', 'group', 'problem', 'question', 'time', 'work', 'system', 'night', 'home', 'room', 'month', 'book', 'job', 'word', 'description', 'board', 'issue', 'friend', 'car', 'city', 'idea', 'server', 'attack', 'keyboard', 'language', 'level', 'clock', 'war', 'result', 'moment', 'song', 'guitar', 'picture', 'dog', 'pet', 'enemy', 'end', 'album', 'fan', 'look', 'tumblr', 'decision', 'consequence', 'notebook', 'difference', 'game', 'class', 'mirror', 'thought', 'line', 'picture', 'website', 'tag', 'agenda']
 nounGenerator = ncountnGenerator + countnGenerator
-verbGenerator = ['make', 'hope', 'have', 'get', 'feel', 'like', 'steal', 'glitch', 'do', 'prosper', 'survive', 'stop', 'go', 'recite', 'tell', 'say', 'play', 'keep', 'crash', 'ruin', 'trust', 'use', 'find', 'leave', 'chill', 'practice', 'finish', 'draw', 'write', 'expect', 'spy', 'destroy', 'watch', 'type', 'eat', 'laugh', 'listen', 'pick', 'sell', 'travel', 'ask', 'try', 'call']
+verbGenerator = ['make', 'hope', 'have', 'get', 'feel', 'like', 'steal', 'glitch', 'do', 'prosper', 'survive', 'stop', 'go', 'recite', 'tell', 'say', 'play', 'keep', 'crash', 'ruin', 'trust', 'use', 'find', 'leave', 'chill', 'practice', 'finish', 'draw', 'write', 'expect', 'spy', 'destroy', 'watch', 'type', 'eat', 'laugh', 'listen', 'pick', 'sell', 'travel', 'ask', 'try', 'call', 'roast', 'yell', 'reblog', 'forget', 'follow', 'load', 'cooperate', 'change', 'heal', 'die', 'post', 'queue']
 thirdPronounGenerator = ['he', 'she', 'it']
 personalPronounGenerator = ['I', 'you', 'we', 'they']
 objectPronounGenerator = ['me', 'you', 'him', 'her', 'it', 'them', 'us']
 conjunctionGenerator = ['and', 'but', 'or']
 negativeGenerator = ['', ' not']
-adjectiveGenerator = ['bad', 'late', 'official', 'happy', 'educational', 'entire', 'random', 'fun', 'stupid', 'serious', 'better', 'pretty', 'boring', 'nice', 'problematic', 'real', 'scary', 'sorry', 'normal', 'perfect', 'strange', 'mysterious', 'small', 'large', 'good', 'new', 'long', 'great', 'old', 'big', 'important']
+adjectiveGenerator = ['bad', 'late', 'official', 'happy', 'educational', 'entire', 'random', 'fun', 'stupid', 'serious', 'better', 'pretty', 'boring', 'nice', 'problematic', 'real', 'scary', 'sorry', 'normal', 'perfect', 'strange', 'mysterious', 'small', 'large', 'good', 'new', 'long', 'great', 'old', 'big', 'important', 'professional', 'specific', 'ready', 'amazing', 'expensive']
 verbTense = ""
 dependentGenerator = ['when', 'because']
 
