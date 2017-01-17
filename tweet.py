@@ -88,4 +88,4 @@ elif randomSentence == '19':
 elif randomSentence == '20':
 	tweetStr = randomProperNoun + " was an inside job"
 elif randomSentence == '21':
-	tweetStr = randomAllNoun " > " + randomAllNoun2
+	tweetStr = randomAllNoun + " > " + randomAllNoun2
