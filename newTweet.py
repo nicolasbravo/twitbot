@@ -193,7 +193,7 @@ while stopBoolean == False:
                         pluralCountn = 'people'
                 elif countn[1] == 'o' and countn[2] == 'o' and countn != 'book':
                         pluralCountn = countn.replace('o', 'e', 2)
-                elif countn[-1] == 'a':
+                elif countn[-1] == 'a' and countn != 'idea':
                         pluralCountn = countn + 'e'
                 elif countn[-1] == 'e' and countn[-2] == 's' and countn[-3] == 'u' and countn[-4] == 'o':
                         pluralCountn = countn[:-4] + 'ice'
