@@ -39,7 +39,7 @@ nots = [' not ', ' ']
 randomNot = random.choice(nots)
 
 #sentence
-sentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
+sentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21']
 randomSentence = random.choice(sentences)
 
 #perspective
@@ -87,3 +87,5 @@ elif randomSentence == '19':
 	tweetStr = "how to " + randomVerb + ": first you " + randomVerb2 + " " + randomAllNoun + ", and then you " + randomVerb3
 elif randomSentence == '20':
 	tweetStr = randomProperNoun + " was an inside job"
+elif randomSentence == '21':
+	tweetStr = randomAllNoun " > " + randomAllNoun2
