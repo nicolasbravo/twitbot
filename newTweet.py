@@ -187,16 +187,18 @@ while stopBoolean == False:
                         pluralCountn = countn[:-2] + 'ices'
                 elif countn[-1] == 'u' and countn[-2] == 'a' and countn[-3] == 'e':
                         pluralCountn = countn + 'x'
-                elif (countn[-1] == 'm' and countn[-2] == 'u') or (countn[-1] == 'n' and countn[-2] == 'o') and countn != 'person':
+                elif (countn[-1] == 'm' and countn[-2] == 'u') or (countn[-1] == 'n' and countn[-2] == 'o') and countn != 'person' and countn != 'album' and countn != 'decision':
                         pluralCountn = countn[:-2] + 'a'
                 elif countn == 'person':
                         pluralCountn = 'people'
-                elif countn[1] == 'o' and countn[2] == 'o' and countn != 'book':
+                elif countn[1] == 'o' and countn[2] == 'o' and countn != 'book' and countn != 'room' and countn != 'look':
                         pluralCountn = countn.replace('o', 'e', 2)
-                elif countn[-1] == 'a' and countn != 'idea':
+                elif countn[-1] == 'a' and countn != 'idea' and countn != 'agenda':
                         pluralCountn = countn + 'e'
                 elif countn[-1] == 'e' and countn[-2] == 's' and countn[-3] == 'u' and countn[-4] == 'o':
                         pluralCountn = countn[:-4] + 'ice'
+		elif countn == 'child':
+			pluralCountn = 'children'
                 else:
                         pluralCountn = countn + 's'
                 wordArray[num1] = " " + pluralCountn
