@@ -1,7 +1,9 @@
 #noncount nouns
-ncountnGenerator = ['tennis', 'water', 'money', 'light', 'power', 'information', 'history', 'food', 'music', '2017', 'sleep', 'aesthetic', 'spam', 'cost', 'storage']
+ncountnGenerator = ['aesthetic', 'cost', 'food', 'history', 'information', 'light', 'money', 'music', 'Outlast', 'power', 'sleep', 'spam', 'storage', 'tennis', 'Tumblr', 'water', '2017']
 #count nouns
-countnGenerator = ['book', 'diary', 'laptop', 'movie', 'remote', 'shoe', 'backpack', 'paper', 'clock', 'word', 'program', 'sheet', 'exam', 'sock', 'phone', 'computer', 'dog', 'day', 'work', 'video', 'life', 'game', 'meme', 'boy', 'number', 'person', 'director', 'firm', 'drill', 'mustache', 'garden', 'fence', 'neighbor', 'outlet', 'table', 'year', 'world', 'hand', 'child', 'eye', 'week', 'point', 'group', 'problem', 'question', 'time', 'work', 'system', 'night', 'home', 'room', 'month', 'book', 'job', 'word', 'description', 'board', 'issue', 'friend', 'car', 'city', 'idea', 'server', 'attack', 'keyboard', 'language', 'level', 'clock', 'war', 'result', 'moment', 'song', 'guitar', 'picture', 'dog', 'pet', 'enemy', 'end', 'album', 'fan', 'look', 'tumblr', 'decision', 'consequence', 'notebook', 'difference', 'game', 'class', 'mirror', 'thought', 'line', 'picture', 'website', 'tag', 'agenda']
+countnGenerator = ['result', 'moment', 'song', 'guitar', 'picture', 'dog', 'pet', 'enemy', 'end', 'album', 'fan', 'look', 'decision', 'consequence', 'notebook', 'difference', 'game', 'class', 'mirror', 'thought', 'line', 'picture', 'website', 'tag', 'agenda', 'volleyball']
+
+countnGenerator = ['attack', 'backpack', 'board', 'book', 'boy', 'car', 'child', 'city', 'clock', 'computer', 'day', 'description', 'diary', 'director', 'dog', 'drill', 'exam', 'eye', 'fence', 'friend', 'game', 'garden', 'girl', 'group', 'hand', 'home', 'idea', 'issue', 'job', 'keyboard', 'language', 'laptop', 'level', 'life', 'meme', 'month', 'movie', 'night', 'number', 'neighbor', 'outlet', 'paper', 'person', 'phone', 'point', 'problem', 'program', 'question', 'remote', 'room', 'server', 'sheet', 'shoe', 'sock', 'system', 'table', 'time', 'video', 'war', 'week', 'word', 'work', 'world', 'year']
 #all nouns
 nounGenerator = ncountnGenerator + countnGenerator
 #verbs
