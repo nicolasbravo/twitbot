@@ -324,4 +324,3 @@ while len(tweetStr) > 140:
 	space = tweetStr.rfind(" ")
 	tweetStr = tweetStr[:space]
 print(tweetStr)
-print(140 - len(tweetStr))
