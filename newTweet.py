@@ -201,6 +201,8 @@ while stopBoolean == False:
 			pluralCountn = 'children'
                 else:
                         pluralCountn = countn + 's'
+		if pluralCountn == 'alba':
+			pluralCountn = 'albums'
                 wordArray[num1] = " " + pluralCountn
 	elif word == 'article noun':
 		pluralBoolean = False
