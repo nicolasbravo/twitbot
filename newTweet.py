@@ -36,6 +36,7 @@ conjunctionBoolean = False
 pluralBoolean = False
 theyBoolean = False
 #words = 0
+interrogativeBoolean = False
 
 #while wordCounter <= totalWords:
 while stopBoolean == False:
@@ -148,9 +149,11 @@ while stopBoolean == False:
 			word = random.choice(wordGenerator)
 	elif previous == 'object pronoun':
 		wordGenerator = ['conjunction', 'stop']
+	elif previous == 'question word':
+		wordGenerator = ['regular past tense verb', 'third person singular present verb']
 	#beginning of sentence
 	else:
-        	wordGenerator = ['plural noun', 'article noun', 'the', 'verb', 'third person pronoun']
+        	wordGenerator = ['plural noun', 'article noun', 'the', 'verb', 'third person pronoun', 'question word']
 		word = random.choice(wordGenerator)
 	#start word generation
         if word == 'noun':
@@ -171,7 +174,9 @@ while stopBoolean == False:
                 #count noun
                 countn = random.choice(countnGenerator)
                 #plural count noun
-                if countn[-1] == 's' or countn[-1] == 'x' or countn[-1] == 'z' or (countn[-1] == 'h' and countn[-2] == 'c') or (countn[-1] == 'h' and countn[-2] == 's'):
+		if pluralCountn == 'album' or pluralCountn == 'question':
+			pluralCountn = countn + 's'
+                elif countn[-1] == 's' or countn[-1] == 'x' or countn[-1] == 'z' or (countn[-1] == 'h' and countn[-2] == 'c') or (countn[-1] == 'h' and countn[-2] == 's'):
                         pluralCountn = countn + 'es'
                 elif countn[-1] == 'y' and countn[-2] != 'a' and countn[-2] != 'e' and countn[-2] != 'i' and countn[-2] != 'o' and countn[-2] != 'u':
                         pluralCountn = countn[:-1] + 'ies'
@@ -201,8 +206,6 @@ while stopBoolean == False:
 			pluralCountn = 'children'
                 else:
                         pluralCountn = countn + 's'
-		if pluralCountn == 'alba':
-			pluralCountn = 'albums'
                 wordArray[num1] = " " + pluralCountn
 	elif word == 'article noun':
 		pluralBoolean = False
@@ -235,6 +238,9 @@ while stopBoolean == False:
 		#rule 8
 		else:
 			regularPastVerb = verb + 'ed'
+		if interrogativeBoolean == True:
+			regularPastVerb = 'did'
+			verbBoolean = False
 		wordArray[num1] = " " + regularPastVerb
 		verbTense = 'regular past tense verb'
 	elif word == 'the':
@@ -299,8 +305,14 @@ while stopBoolean == False:
 			thirdPresentVerb = verb[:-1] + 'ies'
 		else:
 			thirdPresentVerb = verb + 's'
+		if interrogativeBoolean == True:
+			thirdPresentVerb = 'does'
+			verbBoolean = False
 		wordArray[num1] = " " + thirdPresentVerb
 	elif word == 'personal pronoun':
+		num2 = num1 - 1
+		if wordArray[num2] == 'does':
+			wordArray[num2] == 'do'
 		nounBoolean = True
 		personalPronoun = random.choice(personalPronounGenerator)
 		wordArray[num1] = " " + personalPronoun
@@ -308,6 +320,10 @@ while stopBoolean == False:
 		nounBoolean = True
 		objectPronoun = random.choice(objectPronounGenerator)
 		wordArray[num1] = " " + objectPronoun
+	elif word == 'question word':
+		interrogativeBoolean = True
+		questionWord = random.choice(questionWordGenerator)
+		wordArray[num1] = " " + questionWord
 	previous = word
         wordCounter = wordCounter + 1
         num1 = num1 + 1
@@ -322,6 +338,8 @@ while stopBoolean == False:
 for s in wordArray:
         tweetStr = tweetStr + wordArray[s]
 tweetStr = tweetStr[1:]
+if interrogativeBoolean == True:
+	tweetStr = tweetStr + '?'
 while len(tweetStr) > 140:
 	space = tweetStr.rfind(" ")
 	tweetStr = tweetStr[:space]
