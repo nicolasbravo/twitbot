@@ -20,3 +20,5 @@ negativeGenerator = ['', ' not']
 adjectiveGenerator = ['amazing', 'bad', 'better', 'big', 'boring', 'educational', 'expensive', 'fun', 'good', 'great', 'happy', 'important', 'large', 'late', 'long', 'mysterious', 'new', 'nice', 'normal', 'official', 'old', 'perfect', 'pretty', 'problematic', 'professional', 'ready', 'real', 'scary', 'serious', 'small', 'sorry', 'specific', 'strange', 'stupid']
 #dependent sentence conjunctions
 dependentGenerator = ['because', 'when']
+#question words
+questionWordGenerator = ['who', 'what', 'why', 'when', 'where', 'how']
