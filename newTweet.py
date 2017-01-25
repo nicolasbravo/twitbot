@@ -16,6 +16,7 @@ from words import conjunctionGenerator
 from words import negativeGenerator
 from words import adjectiveGenerator
 from words import dependentGenerator
+from words import questionWordGenerator
 
 totalWordsGenerator = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 verbTense = ""
