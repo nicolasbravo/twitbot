@@ -330,6 +330,8 @@ while stopBoolean == False:
                 word = random.choice(['regular past tense verb', 'third person singular present verb'])
         if interrogativeBoolean == False or (interrogativeBoolean == True and num1 != 1):
                 previous = word
+        else:
+                previous = 'question word'
         wordCounter = wordCounter + 1
         num1 = num1 + 1
 #for n in wordArray:
