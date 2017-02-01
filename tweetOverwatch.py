@@ -5,10 +5,10 @@ import random
 from twython import Twython
 
 #noun
-nouns = ["Justice", "Child", "Pain", "Mother", "Scope", "Challenger", "Bad Guy", "Hack", "Blade", "Challenge", "Balance", "Human", "Water", "Thing", "Distraction", "Moment", "Dragon", "Dojo", "Barbecue", "Birthday", "Day", "Rhythm", "Champion", "World", "Noise", "Huckleberry", "Bullet", "Name", "Sky", "Lesson", "Obstacle", "Eye", "Consultation Fee", "Doctor", "Miracle", "Opinion", "Cake", "Hand", "Sky", "Radar", "Professional", "Break", "Man", "Refrigerator", "Psychopath", "Ghost", "Dog", "Apocalypse", "Candy", "Baby", "Hook", "Line", "Death", "Bacon", "Animal", "Lawn", "Punk", "Army", "War", "Watch", "Soldier", "Victory", "Medal", "Imagination", "Harmony", "Reality", "Hard Work", "Dedication", "Chicken", "Feather", "Beard", "Letterbox", "Engineer", "Person", "Expert", "Pig", "Bag", "Cavalry", "Feeling", "Hero", "Dust", "Death", "Cake", "Shot", "Kill", "Spider" , "Fly", "Banana", "Monkey", "Peanut Butter", "Science", "Mountain", "Russia", "Game", "Bear", "Gun", "Gain", "Submarine", "Mind", "Butterfly", "Peace", "Blessing", "Iris", "Halloween", "Cyborg Ninja", "Graveyard", "Candy", "Glitch", "System", "Planet", "Bug", "Head"]
+nouns = ["Justice", "Child", "Pain", "Mother", "Scope", "Challenger", "Bad Guy", "Hack", "Blade", "Challenge", "Balance", "Human", "Water", "Thing", "Distraction", "Moment", "Dragon", "Dojo", "Barbecue", "Birthday", "Day", "Rhythm", "Champion", "World", "Noise", "Huckleberry", "Bullet", "Name", "Sky", "Lesson", "Obstacle", "Eye", "Consultation Fee", "Doctor", "Miracle", "Opinion", "Cake", "Hand", "Sky", "Radar", "Professional", "Break", "Man", "Refrigerator", "Psychopath", "Ghost", "Dog", "Apocalypse", "Candy", "Baby", "Hook", "Line", "Death", "Bacon", "Animal", "Lawn", "Punk", "Army", "War", "Watch", "Soldier", "Victory", "Medal", "Imagination", "Harmony", "Reality", "Hard Work", "Dedication", "Chicken", "Feather", "Beard", "Letterbox", "Engineer", "Person", "Expert", "Pig", "Bag", "Cavalry", "Feeling", "Hero", "Dust", "Death", "Cake", "Shot", "Kill", "Spider" , "Fly", "Banana", "Monkey", "Peanut Butter", "Science", "Mountain", "Russia", "Game", "Bear", "Gun", "Gain", "Submarine", "Mind", "Butterfly", "Peace", "Blessing", "Iris", "Halloween", "Cyborg Ninja", "Graveyard", "Candy", "Glitch", "System", "Planet", "Bug", "Head", "Moon", "Winter", "Life", "Gift", "Funeral", "Ice", "Celebration", "Forecast", "Firework", "Rooster", "Fortune", "Party", "Costume", "Snowflake", "Pen"]
 randomNoun = random.choice(nouns)
 randomNoun2 = random.choice(nouns)
-cnouns = ["Child", "Mother", "Scope", "Challenger", "Bad Guy", "Hack", "Blade", "Challenge", "Human", "Thing", "Distraction", "Moment", "Dragon", "Dojo", "Barbecue", "Birthday", "Day", "Rhythm", "Champion", "World", "Noise", "Bullet", "Name", "Lesson", "Obstacle", "Eye", "Consultation Fee", "Doctor", "Miracle", "Opinion", "Cake", "Hand", "Professional", "Break", "Man", "Refrigerator", "Psychopath", "Ghost", "Dog", "Apocalypse", "Baby", "Hook", "Animal", "Punk", "Army", "War", "Watch", "Soldier", "Medal", "Chicken", "Feather", "Beard", "Letterbox", "Engineer", "Person", "Expert", "Pig", "Bag", "Feeling", "Hero", "Spider", "Fly", "Banana", "Monkey", "Mountain", "Game", "Bear", "Gun", "Submarine", "Butterfly", "Blessing", "Cyborg Ninja", "Graveyard", "Glitch", "System", "Planet", "Bug", "Head"]
+cnouns = ["Child", "Mother", "Scope", "Challenger", "Bad Guy", "Hack", "Blade", "Challenge", "Human", "Thing", "Distraction", "Moment", "Dragon", "Dojo", "Barbecue", "Birthday", "Day", "Rhythm", "Champion", "World", "Noise", "Bullet", "Name", "Lesson", "Obstacle", "Eye", "Consultation Fee", "Doctor", "Miracle", "Opinion", "Cake", "Hand", "Professional", "Break", "Man", "Refrigerator", "Psychopath", "Ghost", "Dog", "Apocalypse", "Baby", "Hook", "Animal", "Punk", "Army", "War", "Watch", "Soldier", "Medal", "Chicken", "Feather", "Beard", "Letterbox", "Engineer", "Person", "Expert", "Pig", "Bag", "Feeling", "Hero", "Spider", "Fly", "Banana", "Monkey", "Mountain", "Game", "Bear", "Gun", "Submarine", "Butterfly", "Blessing", "Cyborg Ninja", "Graveyard", "Glitch", "System", "Planet", "Bug", "Head", "Moon", "Life", "Gift", "Funeral", "Celebration", "Firework", "Rooster", "Party", "Costume", "Snowflake", "Pen"]
 randomCNoun = random.choice(cnouns)
 randomCNoun2 = random.choice(cnouns)
 if randomCNoun[0] == "A" or randomCNoun[0] == "E" or randomCNoun[0] == "I" or randomCNoun[0] == "O" or randomCNoun[0] == "U":
@@ -20,13 +20,13 @@ if randomCNoun2[0] == "A" or randomCNoun2[0] == "E" or randomCNoun2[0] == "I" or
 else:
 	randomArticleNoun2 = "A " + randomCNoun2
 #plural
-pluralNouns = ["Children", "Mothers", "Scopes", "Challengers", "Bad Guys", "Hacks", "Blades", "Challenges", "Humans", "Things", "Distractions", "Moments", "Dragons", "Dojos", "Barbecues", "Birthdays", "Days", "Champions", "Worlds", "Noises", "Bullets", "Names", "Lessons", "Obstacles", "Eyes", "Consultation Fees", "Doctors", "Miracles", "Opinions", "Cakes", "Hands", "Skies", "Radars", "Professionals", "Breaks", "Men", "Refrigerators", "Psychopaths", "Ghosts", "Dogs", "Candies", "Babies", "Hooks", "Animals", "Punks", "Armies", "Wars", "Soldiers", "Medals", "Realities", "Chickens", "Feathers", "Letterboxes", "Engineers", "People", "Experts", "Pigs", "Bags", "Feelings", "Heroes", "Deaths", "Cakes", "Kills", "Spiders", "Flies", "Bananas", "Monkeys", "Mountains", "Games", "Bears", "Guns", "Submarines", "Minds", "Butterflies", "Blessings", "Graveyards", "Candies", "Glitches", "Systems", "Planets", "Bugs", "Heads"]
+pluralNouns = ["Children", "Mothers", "Scopes", "Challengers", "Bad Guys", "Hacks", "Blades", "Challenges", "Humans", "Things", "Distractions", "Moments", "Dragons", "Dojos", "Barbecues", "Birthdays", "Days", "Champions", "Worlds", "Noises", "Bullets", "Names", "Lessons", "Obstacles", "Eyes", "Consultation Fees", "Doctors", "Miracles", "Opinions", "Cakes", "Hands", "Skies", "Radars", "Professionals", "Breaks", "Men", "Refrigerators", "Psychopaths", "Ghosts", "Dogs", "Candies", "Babies", "Hooks", "Animals", "Punks", "Armies", "Wars", "Soldiers", "Medals", "Realities", "Chickens", "Feathers", "Letterboxes", "Engineers", "People", "Experts", "Pigs", "Bags", "Feelings", "Heroes", "Deaths", "Cakes", "Kills", "Spiders", "Flies", "Bananas", "Monkeys", "Mountains", "Games", "Bears", "Guns", "Submarines", "Minds", "Butterflies", "Blessings", "Graveyards", "Candies", "Glitches", "Systems", "Planets", "Bugs", "Heads", "Moons", "Lives", "Gifts", "Funerals", "Celebrations", "Fireworks", "Roosters", "Parties", "Costumes", "Snowflakes", "Pens"]
 randomPluralNoun = random.choice(pluralNouns)
 #proper
-heroNouns = ["Ana", "Bastion", "D.Va", "Genji", "Hanzo", "Junkrat", "Lucio", "McCree", "Mei", "Mercy", "Pharah", "Reaper", "Reinhardt", "Roadhog", "Soldier: 76", "Symmetra", "Torbjorn", "Tracer", "Widowmaker", "Winston", "Zarya", "Zenyatta"]
+heroNouns = ["Ana", "Bastion", "D.Va", "Genji", "Hanzo", "Junkrat", "Lucio", "McCree", "Mei", "Mercy", "Pharah", "Reaper", "Reinhardt", "Roadhog", "Soldier: 76", "Sombra", "Symmetra", "Torbjorn", "Tracer", "Widowmaker", "Winston", "Zarya", "Zenyatta"]
 randomHeroNoun = random.choice(heroNouns)
 #bastion
-bastionWords = ["Doo", "Woo", "Boo", "Doo", "Dee", "Chirr", "Dah", "Wee", "Dun", "Boop", "Dweet", "Hee", "Hoo", "Sh", "Zwee", "Bud"]
+bastionWords = ["Doo", "Woo", "Boo", "Doo", "Dee", "Chirr", "Dah", "Wee", "Dun", "Boop", "Dweet", "Hee", "Hoo", "Sh", "Zwee", "Bud", "Dwee", "Woop"]
 randomBastion1 = random.choice(bastionWords)
 randomBastion2 = random.choice(bastionWords)
 randomBastion3 = random.choice(bastionWords)
@@ -35,26 +35,26 @@ randomBastion5 = random.choice(bastionWords)
 randomBastion6 = random.choice(bastionWords)
 
 #verb
-verbs = ["Behave", "Deliver", "Die", "Know", "Rain", "Learn", "Need", "Tuck", "Think", "Witness", "Expect", "Flow", "Do", "Ignore", "Doubt", "Remember", "Choose", "Step", "Want", "Have", "Give", "Smile", "Hit", "Stop", "Hear", "Believe", "Watch", "Kill", "Like", "Lose", "Reach", "Want", "Chill", "Fight", "Move", "Freeze", "Send", "Take", "See", "Achieve", "Fly", "Look", "Walk", "Kill", "Live", "Salute", "Crush", "Respect", "Take", "Say", "Start", "Finish", "Smell", "Want", "Lack", "Think", "Struggle", "Make", "Underestimate", "Leave", "Buy", "Keep", "Shoot", "Score", "Eat", "Change", "Look", "Miss", "Bench", "Break", "Play", "Hug", "Think", "Swim", "Dream", "Juggle", "Embrace", "Strive", "Hack", "Squish", "Mess", "Die", "Show"]
+verbs = ["Behave", "Deliver", "Die", "Know", "Rain", "Learn", "Need", "Tuck", "Think", "Witness", "Expect", "Flow", "Do", "Ignore", "Doubt", "Remember", "Choose", "Step", "Want", "Have", "Give", "Smile", "Hit", "Stop", "Hear", "Believe", "Watch", "Kill", "Like", "Lose", "Reach", "Want", "Chill", "Fight", "Move", "Freeze", "Send", "Take", "See", "Achieve", "Fly", "Look", "Walk", "Kill", "Live", "Salute", "Crush", "Respect", "Take", "Say", "Start", "Finish", "Smell", "Want", "Lack", "Think", "Struggle", "Make", "Underestimate", "Leave", "Buy", "Keep", "Shoot", "Score", "Eat", "Change", "Look", "Miss", "Bench", "Break", "Play", "Hug", "Think", "Swim", "Dream", "Juggle", "Embrace", "Strive", "Hack", "Squish", "Mess", "Die", "Show", "Crow", "Fall"]
 randomVerb = random.choice(verbs)
 randomVerb2 = random.choice(verbs)
 #past tense
-pastVerbs = ["Delivered", "Behaved", "Died", "Knew", "Rained", "Learnt", "Needed", "Tucked", "Thought", "Witnessed", "Expected", "Flowed", "Did", "Ignored", "Doubted", "Remembered", "Chose", "Stepped", "Wanted", "Had", "Gave", "Smiled", "Hit", "Stopped", "Heard", "Believed", "Watched", "Killed", "Liked", "Lost", "Reached", "Wanted", "Chilled", "Fought", "Moved", "Froze", "Sent", "Took", "Saw", "Achieved", "Flew", "Walked", "Killed", "Lived", "Saluted", "Crushed", "Respected", "Took", "Said", "Started", "Finished", "Smelled", "Wanted", "Lacked", "Thought", "Struggled", "Made", "Underestimated", "Left", "Bought", "Kept", "Shot", "Scored", "Ate", "Changed", "Looked", "Missed", "Benched", "Broke", "Played", "Hugged", "Thought", "Swam", "Freed", "Dreamt", "Juggled", "Embraced", "Strived", "Hacked", "Squished", "Messed", "Died", "Showed"]
+pastVerbs = ["Delivered", "Behaved", "Died", "Knew", "Rained", "Learnt", "Needed", "Tucked", "Thought", "Witnessed", "Expected", "Flowed", "Did", "Ignored", "Doubted", "Remembered", "Chose", "Stepped", "Wanted", "Had", "Gave", "Smiled", "Hit", "Stopped", "Heard", "Believed", "Watched", "Killed", "Liked", "Lost", "Reached", "Wanted", "Chilled", "Fought", "Moved", "Froze", "Sent", "Took", "Saw", "Achieved", "Flew", "Walked", "Killed", "Lived", "Saluted", "Crushed", "Respected", "Took", "Said", "Started", "Finished", "Smelled", "Wanted", "Lacked", "Thought", "Struggled", "Made", "Underestimated", "Left", "Bought", "Kept", "Shot", "Scored", "Ate", "Changed", "Looked", "Missed", "Benched", "Broke", "Played", "Hugged", "Thought", "Swam", "Freed", "Dreamt", "Juggled", "Embraced", "Strived", "Hacked", "Squished", "Messed", "Died", "Showed", "Crowed", "Fell"]
 randomPastVerb = random.choice(pastVerbs)
 randomPastVerb2 = random.choice(pastVerbs)
 #present tense
-presentVerbs = ["Dies", "Behaves", "Delivers", "Knows", "Rains", "Learns", "Needs", "Tucks", "Thinks", "Witnesses", "Expects", "Flows", "Does", "Ignores", "Doubts", "Remembers", "Chooses", "Steps", "Wants", "Has", "Gives", "Smiles", "Hits", "Stops", "Hears", "Believes", "Watches", "Kills", "Likes", "Loses", "Reaches", "Wants", "Chills", "Fights", "Moves", "Freezes", "Sends", "Takes", "Sees", "Achieves", "Flies", "Looks", "Walks", "Kills", "Lives", "Salutes", "Crushes", "Respects", "Takes", "Says", "Starts", "Finishes", "Smells", "Wants", "Lacks", "Thinks", "Struggles", "Makes", "Underestimates", "Leaves", "Buys", "Keeps", "Shoots", "Scores", "Eats", "Changes", "Misses", "Looks", "Benches", "Breaks", "Plays", "Hugs", "Thinks", "Swims", "Frees", "Dreams", "Juggles", "Embraces", "Strives", "Hacks", "Squishes", "Messes", "Dies", "Shows"]
+presentVerbs = ["Dies", "Behaves", "Delivers", "Knows", "Rains", "Learns", "Needs", "Tucks", "Thinks", "Witnesses", "Expects", "Flows", "Does", "Ignores", "Doubts", "Remembers", "Chooses", "Steps", "Wants", "Has", "Gives", "Smiles", "Hits", "Stops", "Hears", "Believes", "Watches", "Kills", "Likes", "Loses", "Reaches", "Wants", "Chills", "Fights", "Moves", "Freezes", "Sends", "Takes", "Sees", "Achieves", "Flies", "Looks", "Walks", "Kills", "Lives", "Salutes", "Crushes", "Respects", "Takes", "Says", "Starts", "Finishes", "Smells", "Wants", "Lacks", "Thinks", "Struggles", "Makes", "Underestimates", "Leaves", "Buys", "Keeps", "Shoots", "Scores", "Eats", "Changes", "Misses", "Looks", "Benches", "Breaks", "Plays", "Hugs", "Thinks", "Swims", "Frees", "Dreams", "Juggles", "Embraces", "Strives", "Hacks", "Squishes", "Messes", "Dies", "Shows", "Crows", "Falls"]
 randomPresentVerb = random.choice(presentVerbs)
 randomPresentVerb2 = random.choice(presentVerbs)
 #ing
-ingVerbs = ["Behaving", "Delivering", "Dying", "Knowing", "Raining", "Learning", "Needing", "Tucking", "Thinking", "Witnessing", "Expecting", "Flowing", "Doing", "Ignoring", "Doubting", "Remembering", "Choosing", "Stepping", "Wanting", "Having", "Giving", "Smiling", "Hitting", "Stopping", "Hearing", "Believing", "Watching", "Killing", "Liking", "Losing", "Reaching", "Wanting", "Chilling", "Fighting", "Moving", "Freezing", "Sending", "Taking", "Seeing", "Achieving", "Flying", "Looking", "Walking", "Killing", "Living", "Saluting", "Crushing", "Respecting", "Taking", "Saying", "Starting", "Finishing", "Smelling", "Lacking", "Thinking", "Struggling", "Making", "Underestimating", "Leaving", "Buying", "Keeping", "Shooting", "Scoring", "Eating", "Changing", "Looking", "Missing", "Benching", "Breaking", "Playing", "Hugging", "Thinking", "Swimming", "Freeing", "Dreaming", "Juggling", "Embracing", "Striving", "Hacking", "Squishing", "Messing", "Dying", "Showing"]
+ingVerbs = ["Behaving", "Delivering", "Dying", "Knowing", "Raining", "Learning", "Needing", "Tucking", "Thinking", "Witnessing", "Expecting", "Flowing", "Doing", "Ignoring", "Doubting", "Remembering", "Choosing", "Stepping", "Wanting", "Having", "Giving", "Smiling", "Hitting", "Stopping", "Hearing", "Believing", "Watching", "Killing", "Liking", "Losing", "Reaching", "Wanting", "Chilling", "Fighting", "Moving", "Freezing", "Sending", "Taking", "Seeing", "Achieving", "Flying", "Looking", "Walking", "Killing", "Living", "Saluting", "Crushing", "Respecting", "Taking", "Saying", "Starting", "Finishing", "Smelling", "Lacking", "Thinking", "Struggling", "Making", "Underestimating", "Leaving", "Buying", "Keeping", "Shooting", "Scoring", "Eating", "Changing", "Looking", "Missing", "Benching", "Breaking", "Playing", "Hugging", "Thinking", "Swimming", "Freeing", "Dreaming", "Juggling", "Embracing", "Striving", "Hacking", "Squishing", "Messing", "Dying", "Showing", "Crowing", "Falling"]
 randomIngVerb = random.choice(ingVerbs)
 
 #sentence
 sentences = ['ana', 'dva', 'genji', 'hanzo', 'junkrat', 'lucio', 'mccree', 'bastion', 'mei', 'mercy', 'pharah', 'reaper', 'reinhardt', 'roadhog', 'soldier', 'symmetra', 'torbjorn', 'tracer', 'widowmaker', 'winston', 'zarya', 'zenyatta', 'sombra']
 randomSentence = random.choice(sentences)
 #ana
-anaSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+anaSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
 ana = random.choice(anaSentences)
 #dva
 dvaSentences = ['1', '2', '3', '4', '5']
@@ -63,19 +63,19 @@ dva = random.choice(dvaSentences)
 genjiSentences = ['1', '2', '3', '4', '5', '6']
 genji = random.choice(genjiSentences)
 #hanzo
-hanzoSentences = ['1', '2', '3', '4']
+hanzoSentences = ['1', '2', '3', '4', '5']
 hanzo = random.choice(hanzoSentences)
 #junkrat
 junkratSentences = ['1', '2', '3', '4']
 junkrat = random.choice(junkratSentences)
 #lucio
-lucioSentences = ['1', '2', '3', '4', '5', '6', '7']
+lucioSentences = ['1', '2', '3', '4', '5', '6', '7', '8']
 lucio = random.choice(lucioSentences)
 #mccree
-mccreeSentences = ['1', '2', '3', '4', '5', '6']
+mccreeSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 mccree = random.choice(mccreeSentences)
 #bastion
-bastionSentences = ['3', '4', '5', '6']
+bastionSentences = ['1', '2', '3', '4', '5', '6']
 bastion = random.choice(bastionSentences)
 #mei
 meiSentences = ['1', '2', '3', '4']
@@ -84,10 +84,10 @@ mei = random.choice(meiSentences)
 mercySentences = ['1', '2', '3', '4', '5', '6']
 mercy = random.choice(mercySentences)
 #pharah
-pharahSentences = ['1', '2', '3', '4', '5', '6']
+pharahSentences = ['1', '2', '3', '4', '5', '6', '7']
 pharah = random.choice(pharahSentences)
 #reaper
-reaperSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+reaperSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 reaper = random.choice(reaperSentences)
 #reinhardt
 reinhardtSentences = ['1', '2', '3']
@@ -96,7 +96,7 @@ reinhardt = random.choice(reinhardtSentences)
 roadhogSentences = ['1', '2', '3', '4',  '5', '6', '7', '8']
 roadhog = random.choice(roadhogSentences)
 #soldier: 76
-soldierSentences = ['1', '2', '3', '4', '5', '6']
+soldierSentences = ['1', '2', '3', '4', '5', '6', '7']
 soldier = random.choice(soldierSentences)
 #symmetra
 symmetraSentences = ['1', '2', '3', '4']
@@ -105,19 +105,19 @@ symmetra = random.choice(symmetraSentences)
 torbjornSentences = ['1', '2', '3', '4']
 torbjorn = random.choice(torbjornSentences)
 #tracer
-tracerSentences = ['1', '2', '3', '4', '5']
+tracerSentences = ['1', '2', '3', '4', '5', '6', '7']
 tracer = random.choice(tracerSentences)
 #widowmaker
-widowmakerSentences = ['1', '2', '3', '4', '5']
+widowmakerSentences = ['1', '2', '3', '4', '5', '6']
 widowmaker = random.choice(widowmakerSentences)
 #winston
-winstonSentences = ['1', '2', '3']
+winstonSentences = ['1', '2', '3', '4']
 winston = random.choice(winstonSentences)
 #zarya
 zaryaSentences = ['1', '2', '3', '4', '5', '6', '7']
 zarya = random.choice(zaryaSentences)
 #zenyatta
-zenyattaSentences = ['1', '2', '3', '4', '5', '6', '7']
+zenyattaSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 zenyatta = random.choice(zenyattaSentences)
 #sombra
 sombraSentences = ['1', '2', '3', '4']
@@ -144,6 +144,12 @@ if randomSentence == 'ana':
 		tweetStr = "Ana: " + randomVerb + " Me"
 	elif ana == '9':
 		tweetStr = "Ana: You " + randomVerb + " Nothing"
+	elif ana == '10':
+		tweetStr = "Ana: " + randomVerb + " From The " + randomNoun
+	elif ana == '11':
+		tweetStr = "Ana: I'm " + randomIngVerb + " Out For You"
+	elif ana == '12':
+		tweetStr = "Ana: The " + randomNoun + " In " + randomNoun2
 elif randomSentence == 'dva':
 	#dva
 	if dva == '1':
@@ -155,7 +161,7 @@ elif randomSentence == 'dva':
 	elif dva == '4':
 		tweetStr = "D.Va: No " + randomPluralNoun + " Required"
 	elif dva == '5':
-		tweetStr = "D.Va: Happy " + randomNoun
+		tweetStr = "D.Va: Happy " + randomNoun + "!"
 elif randomSentence == 'genji':
 	#genji
 	if genji == '1':
@@ -180,6 +186,8 @@ elif randomSentence == 'hanzo':
 		tweetStr = "Hanzo: I Choose You, Spirit " + randomNoun
 	elif hanzo == '4':
 		tweetStr = "Hanzo: Step Into The " + randomNoun
+	elif hanzo == '5':
+		tweetStr = "Hanzo: " + randomArticleNoun + " For You"
 elif randomSentence == 'junkrat':
 	#junkrat
 	if junkrat == '1':
@@ -206,6 +214,8 @@ elif randomSentence == 'lucio':
 		tweetStr = "Lucio: You Gotta " + randomVerb + "!"
 	elif lucio == '7':
 		tweetStr = "Lucio: " + randomPastVerb + " It!"
+	elif lucio == '8':
+		tweetStr = "Lucio: Happy " + randomNoun + "!"
 elif randomSentence == 'mccree':
 	#mccree
 	if mccree == '1':
@@ -220,9 +230,21 @@ elif randomSentence == 'mccree':
 		tweetStr = "McCree: I've Got " + randomArticleNoun + " With Your Name On It"
 	elif mccree == '6':
 		tweetStr = "McCree: Reach For The " + randomNoun
+	elif mccree == '7':
+		tweetStr = "McCree: I Don't Much Like " + randomIngVerb
+	elif mccree == '8':
+		tweetStr = "McCree: It's Your " + randomNoun
+	elif mccree == '9':
+		tweetStr = "McCree: Had To " + randomVerb + " The " + randomNoun
+	elif mccree == '10':
+		tweetStr = "McCree: Calls For " + randomArticleNoun
 elif randomSentence == 'bastion':
 	#bastion
-	if bastion == '3':
+	if bastion == '1':
+		tweetStr = "Bastion: " + randomBastion1
+	elif bastion == '2':
+		tweetStr = "Bastion: " + randomBastion1 + " " + randomBastion2
+	elif bastion == '3':
 		tweetStr = "Bastion: " + randomBastion1 + " " + randomBastion2 + " " + randomBastion3
 	elif bastion == '4':
 		tweetStr = "Bastion: " + randomBastion1 + " " + randomBastion2 + " " + randomBastion3 + " " + randomBastion4
@@ -230,6 +252,13 @@ elif randomSentence == 'bastion':
 		tweetStr = "Bastion: " + randomBastion1 + " " + randomBastion2 + " " + randomBastion3 + " " + randomBastion4 + " " + randomBastion5
 	elif bastion == '6':
 		tweetStr = "Bastion: " + randomBastion1 + " " + randomBastion2 + " " + randomBastion3 + " " + randomBastion4 + " " + randomBastion5 + " " + randomBastion6
+	#end of the sentence, doing nothing for the declarative since it is already done
+	bastionSentenceGenerator = ['declarative', 'interrogative', 'exclamatory']
+	bastionSentence = random.choice(bastionSentenceGenerator)
+	if bastionSentence == 'interrogative':
+		tweetStr = tweetStr + "?"
+	elif bastionSentence == 'exclamatory':
+		tweetStr = tweetStr + "!"
 elif randomSentence == 'mei':
 	#mei
 	if mei == '1':
@@ -268,6 +297,8 @@ elif randomSentence == 'pharah':
 		tweetStr = "Pharah: Play Nice, Play " + randomHeroNoun
 	elif pharah == '6':
 		tweetStr = "Pharah: Sorry, But I Need To " + randomVerb
+	elif pharah == '7':
+		tweetStr = "Pharah: I " + randomVerb + " The " + randomNoun
 elif randomSentence == 'reaper':
 	#reaper
 	if reaper == '1':
@@ -288,6 +319,8 @@ elif randomSentence == 'reaper':
 		tweetStr = "Reaper: You Look Like You've Seen " + randomArticleNoun
 	elif reaper == '9':
 		tweetStr = "Reaper: I " + randomVerb + " The " + randomNoun + " Shift"
+	elif reaper == '10':
+		tweetStr = "Reaper: Now Those Are Some " + randomPluralNoun
 elif randomSentence == 'reinhardt':
 	#reinhardt
 	if reinhardt == '1':
@@ -328,6 +361,8 @@ elif randomSentence == 'soldier':
 		tweetStr = "Soldier 76: Smells Like " + randomNoun
 	elif soldier == '6':
 		tweetStr = "Soldier 76: You Want A " + randomNoun + "?"
+	elif soldier == '7':
+		tweetStr = "Soldier 76: The " + randomNoun + " " + randomPresentVerb + " At Midnight"
 elif randomSentence == 'symmetra':
 	#symmetra
 	if symmetra == '1':
@@ -360,6 +395,10 @@ elif randomSentence == 'tracer':
 		tweetStr = "Tracer: The World Could Always Use More " + randomPluralNoun
 	elif tracer == '5':
 		tweetStr = "Tracer: Eat My " + randomNoun
+	elif tracer == '6':
+		tweetStr = "Tracer: It's In The " + randomNoun
+	elif tracer == '7':
+		tweetStr = "Tracer: Who's Ready For Some " + randomPluralNoun + "?"
 #widowmaker
 elif randomSentence == 'widowmaker':
 	if widowmaker == '1':
@@ -372,6 +411,8 @@ elif randomSentence == 'widowmaker':
 		tweetStr = "Widowmaker: One " + randomNoun + ", One " + randomNoun2
 	elif widowmaker == '5':
 		tweetStr = "Widowmaker: I Don't " + randomVerb
+	elif widowmaker == '6':
+		tweetStr = "Widowmaker: The " + randomNoun + " Is Over"
 #winston
 elif randomSentence == 'winston':
 	if winston == '1':
@@ -380,6 +421,8 @@ elif randomSentence == 'winston':
 		tweetStr = "Winston: Did Someone Say " + randomNoun + "?"
 	elif winston == '3':
 		tweetStr = "Winston: The Power Of " + randomNoun
+	elif winston == '4':
+		tweetStr = "Winston: This Is Not " + randomArticleNoun
 #zarya
 elif randomSentence == 'zarya':
 	if zarya == '1':
@@ -412,6 +455,10 @@ elif randomSentence == 'zenyatta':
 		tweetStr = "Zenyatta: I Will Not " + randomVerb
 	elif zenyatta == '7':
 		tweetStr = "Zenyatta: The " + randomNoun + " " + randomPresentVerb + " You"
+	elif zenyatta == '8':
+		tweetStr = "Zenyatta: No " + randomNoun + " Ever " + randomPresentVerb + " In The Wrong Place"
+	elif zenyatta == '9':
+		tweetStr = "Zenyatta: Every " + randomNoun + " " + randomPresentVerb + " In Its Own " + randomNoun
 #sombra
 elif randomSentence == 'sombra':
 	if sombra == '1':
