@@ -342,11 +342,19 @@ while stopBoolean == False:
 #       nplusone = nTracker + 1
 #       if wordArray[nplusone] == 'and' or wordArray[nplusone] == 'or' or wordArray[nplusone] == 'but':
 #               wordArray[nTracker] = ''
-for s in wordArray:
-        tweetStr = tweetStr + wordArray[s]
-tweetStr = tweetStr[1:]
 if interrogativeBoolean == True:
+        for s in wordArray:
+                if s == 1:
+                        tweetStr = tweetStr + wordArray[2]
+                elif s == 2:
+                        tweetStr = tweetStr + wordArray[1]
+                else:
+                        tweetStr = tweetStr + wordArray[s]
         tweetStr = tweetStr + '?'
+else:
+        for s in wordArray:
+                tweetStr = tweetStr + wordArray[s]
+tweetStr = tweetStr[1:]
 while len(tweetStr) > 140:
         space = tweetStr.rfind(" ")
         tweetStr = tweetStr[:space]
