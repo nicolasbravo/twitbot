@@ -177,7 +177,7 @@ while stopBoolean == False:
                 #count noun
                 countn = random.choice(countnGenerator)
                 #plural count noun
-                if countn == 'album' or countn == 'question':
+                if countn == 'album' or countn == 'question' or countn == 'description':
                         pluralCountn = countn + 's'
                 elif countn[-1] == 's' or countn[-1] == 'x' or countn[-1] == 'z' or (countn[-1] == 'h' and countn[-2] == 'c') or (countn[-1] == 'h' and countn[-2] == 's'):
                         pluralCountn = countn + 'es'
