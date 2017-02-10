@@ -36,8 +36,8 @@ dependentBoolean = False
 conjunctionBoolean = False
 pluralBoolean = False
 theyBoolean = False
-#words = 0
 interrogativeBoolean = False
+doesBoolean = False
 
 #while wordCounter <= totalWords:
 while stopBoolean == False:
@@ -241,21 +241,14 @@ while stopBoolean == False:
                 #rule 8
                 else:
                         regularPastVerb = verb + 'ed'
-                if interrogativeBoolean == True:
+                if doesBoolean == True:
                         regularPastVerb = 'did'
+                        doesBoolean = False
                         verbBoolean = False
                 wordArray[num1] = " " + regularPastVerb
                 verbTense = 'regular past tense verb'
         elif word == 'the':
                 wordArray[num1] = ' the'
-#       elif word == 'punctuation':
-#               for x in wordArray:
-#                       if wordArray[x] == '.':
-#                               periodBoolean = True
-#               if periodBoolean == True:
-#                       stopBoolean = True
-#               else:
-#                       wordArray[num1] = '.'
         elif word == 'third person pronoun':
                 nounBoolean = True
                 if pluralBoolean == True:
@@ -268,14 +261,6 @@ while stopBoolean == False:
                 nounBoolean = False
                 verbBoolean = False
                 conjunctionBoolean = True
-                #num2 = num1 - 1
-                #for x in wordArray:
-                #       if wordArray[x] == ',':
-                #               commaCounter = commaCounter + 1
-                #       if commaCounter < 2:
-                #               wordArray[num2] = ","
-                #       else:
-                #               wordArray[num2] = "."
                 conjunction = random.choice(conjunctionGenerator)
                 wordArray[num1] = " " + conjunction
         elif word == 'dependent':
@@ -298,8 +283,9 @@ while stopBoolean == False:
                 #verb
                 verb = random.choice(verbGenerator)
                 #third person singular present verb
-                if interrogativeBoolean == True:
+                if doesBoolean == True:
                         thirdPresentVerb = 'does'
+                        doesBoolean = False
                         verbBoolean = False
                 #irregular                
                 elif verb == 'have':
@@ -325,6 +311,7 @@ while stopBoolean == False:
                 wordArray[num1] = " " + objectPronoun
         elif word == 'question word':
                 interrogativeBoolean = True
+                doesBoolean = True
                 questionWord = random.choice(questionWordGenerator)
                 wordArray[num1] = " " + questionWord
                 word = random.choice(['regular past tense verb', 'third person singular present verb'])
@@ -334,14 +321,6 @@ while stopBoolean == False:
                 previous = 'question word'
         wordCounter = wordCounter + 1
         num1 = num1 + 1
-#for n in wordArray:
-#       if wordArray[n] == ','
-#               nTracker = n
-#               commaTracker = commaTracker + 1
-#if commaTracker == 1:
-#       nplusone = nTracker + 1
-#       if wordArray[nplusone] == 'and' or wordArray[nplusone] == 'or' or wordArray[nplusone] == 'but':
-#               wordArray[nTracker] = ''
 if interrogativeBoolean == True:
         for s in wordArray:
                 if s == 1:
