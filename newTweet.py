@@ -337,4 +337,3 @@ tweetStr = tweetStr[1:]
 while len(tweetStr) > 140:
         space = tweetStr.rfind(" ")
         tweetStr = tweetStr[:space]
-print(tweetStr)
