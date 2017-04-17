@@ -469,4 +469,3 @@ elif randomSentence == 'sombra':
 		tweetStr = "Sombra: Just " + randomIngVerb + " " + randomArticleNoun
 	elif sombra == '4':
 		tweetStr = "Sombra: " + randomVerb + " With The Best And " + randomVerb2 + " Like The Rest"
-print(tweetStr)
