@@ -404,7 +404,7 @@ elif randomSentence == 'roadhog':
 	elif roadhog == '8':
 		tweetStr = "Roadhog: Want Some " + randomNoun + "?"
 	elif roadhog == '9':
-		tweetStr = "Roadhog: I've " + randomPastVerb + " Someone For Less Than That"
+		tweetStr = "Roadhog: I've " + randomPastVerb + " " + "Someone For Less Than That"
 elif randomSentence == 'soldier':
 	#soldier: 76
 	if soldier == '1':
