@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#TEST
 import sys
 import string
 import random
