@@ -55,49 +55,49 @@ ingVerbs = ["Behaving", "Delivering", "Dying", "Knowing", "Raining", "Learning",
 randomIngVerb = random.choice(ingVerbs)
 
 #sentence
-sentences = ['ana', 'dva', 'genji', 'hanzo', 'junkrat', 'lucio', 'mccree', 'bastion', 'mei', 'mercy', 'pharah', 'reaper', 'reinhardt', 'roadhog', 'soldier', 'symmetra', 'torbjorn', 'tracer', 'widowmaker', 'winston', 'zarya', 'zenyatta', 'sombra', 'orisa', 'doomfist']
+sentences = ['ana', 'dva', 'genji', 'hanzo', 'junkrat', 'lucio', 'mccree', 'bastion', 'mei', 'mercy', 'pharah', 'reaper', 'reinhardt', 'roadhog', 'soldier', 'symmetra', 'torbjorn', 'tracer', 'widowmaker', 'winston', 'zarya', 'zenyatta', 'sombra', 'orisa', 'doomfist', 'moira']
 randomSentence = random.choice(sentences)
 #ana
 anaSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15']
 ana = random.choice(anaSentences)
 #dva
-dvaSentences = ['1', '2', '3', '4', '5', '6', '7', '8']
+dvaSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 dva = random.choice(dvaSentences)
 #genji
-genjiSentences = ['1', '2', '3', '4', '5', '6', '7']
+genjiSentences = ['1', '2', '3', '4', '5', '6', '7', '8']
 genji = random.choice(genjiSentences)
 #hanzo
-hanzoSentences = ['1', '2', '3', '4', '5']
+hanzoSentences = ['1', '2', '3', '4', '5', '6']
 hanzo = random.choice(hanzoSentences)
 #junkrat
-junkratSentences = ['1', '2', '3', '4', '5', '6']
+junkratSentences = ['1', '2', '3', '4', '5', '6', '7']
 junkrat = random.choice(junkratSentences)
 #lucio
 lucioSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 lucio = random.choice(lucioSentences)
 #mccree
-mccreeSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+mccreeSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']
 mccree = random.choice(mccreeSentences)
 #bastion
 bastionSentences = ['1', '2', '3', '4', '5', '6']
 bastion = random.choice(bastionSentences)
 #mei
-meiSentences = ['1', '2', '3', '4', '5', '6']
+meiSentences = ['1', '2', '3', '4', '5', '6', '7', '8']
 mei = random.choice(meiSentences)
 #mercy
-mercySentences = ['1', '2', '3', '4', '5', '6', '7']
+mercySentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 mercy = random.choice(mercySentences)
 #pharah
-pharahSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']
+pharahSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']
 pharah = random.choice(pharahSentences)
 #reaper
-reaperSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']
+reaperSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14']
 reaper = random.choice(reaperSentences)
 #reinhardt
-reinhardtSentences = ['1', '2', '3', '4']
+reinhardtSentences = ['1', '2', '3', '4', '5', '6', '7']
 reinhardt = random.choice(reinhardtSentences)
 #roadhog
-roadhogSentences = ['1', '2', '3', '4',  '5', '6', '7', '8', '9']
+roadhogSentences = ['1', '2', '3', '4',  '5', '6', '7', '8', '9', '10', '11']
 roadhog = random.choice(roadhogSentences)
 #soldier: 76
 soldierSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
@@ -112,16 +112,16 @@ torbjorn = random.choice(torbjornSentences)
 tracerSentences = ['1', '2', '3', '4', '5', '6', '7', '8']
 tracer = random.choice(tracerSentences)
 #widowmaker
-widowmakerSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+widowmakerSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']
 widowmaker = random.choice(widowmakerSentences)
 #winston
 winstonSentences = ['1', '2', '3', '4', '5', '6']
 winston = random.choice(winstonSentences)
 #zarya
-zaryaSentences = ['1', '2', '3', '4', '5', '6', '7']
+zaryaSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 zarya = random.choice(zaryaSentences)
 #zenyatta
-zenyattaSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+zenyattaSentences = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']
 zenyatta = random.choice(zenyattaSentences)
 #sombra
 sombraSentences = ['1', '2', '3', '4', '5', '6', '7']
@@ -132,6 +132,9 @@ orisa = random.choice(orisaSentences)
 #doomfist
 doomfistSentences = ['1', '2', '3', '4', '5', '6', '7']
 doomfist = random.choice(doomfistSentences)
+#moira
+moiraSentences = ['1', '2', '3']
+moira = random.choice(moiraSentences)
 
 #tweet contents
 if randomSentence == 'ana':
@@ -169,11 +172,11 @@ if randomSentence == 'ana':
 elif randomSentence == 'dva':
 	#dva
 	if dva == '1':
-		tweetStr = "D.Va: Love, " + randomHeroNoun 
+		tweetStr = "D.Va: Love " + randomHeroNoun 
 	elif dva == '2':
-		tweetStr = "D.Va: A New " + randomNoun +  "!"
+		tweetStr = "D.Va: Here Comes A New " + randomNoun +  "!"
 	elif dva == '3':
-		tweetStr = "D.Va: I Play To " + randomNoun
+		tweetStr = "D.Va: I Play To " + randomVerb
 	elif dva == '4':
 		tweetStr = "D.Va: No " + randomPluralNoun + " Required"
 	elif dva == '5':
@@ -184,10 +187,12 @@ elif randomSentence == 'dva':
 		tweetStr = "D.Va: " + randomVerb + " This"
 	elif dva == '8':
 		tweetStr = "D.Va: D.Va - 1, " + randomHeroNoun + " - 0"
+	elif dva == '9':
+		tweetStr = "D.Va: I'm #" + str(random.randrange(0,100)) + "!"
 elif randomSentence == 'genji':
 	#genji
 	if genji == '1':
-		tweetStr = "Genji: A Steady " + randomNoun
+		tweetStr = "Genji: A Steady " + randomNoun + " " + randomPresentVerb + " The " + randomNoun
 	elif genji == '2':
 		tweetStr = "Genji: I Was Hoping For " + randomArticleNoun
 	elif genji == '3':
@@ -200,6 +205,8 @@ elif randomSentence == 'genji':
 		tweetStr = "Genji: My Halloween Costume? " + randomNoun
 	elif genji == '7':
 		tweetStr = "Genji: " + randomNoun + " And " + randomNoun2 + " " + randomVerb + " On The Edge Of My " + randomNoun3
+	elif genji == '8':
+		tweetStr = "Genji: You Seem Nice, I Hate To " + randomVerb + " You"
 elif randomSentence == 'hanzo':
 	#hanzo
 	if hanzo == '1':
@@ -212,6 +219,8 @@ elif randomSentence == 'hanzo':
 		tweetStr = "Hanzo: Step Into The " + randomNoun
 	elif hanzo == '5':
 		tweetStr = "Hanzo: " + randomArticleNoun + " For You"
+	elif hanzo == '6':
+		tweetStr = "Hanzo: " + randomVerb + " Like " + randomNoun
 elif randomSentence == 'junkrat':
 	#junkrat
 	if junkrat == '1':
@@ -226,6 +235,8 @@ elif randomSentence == 'junkrat':
 		tweetStr = "Junkrat: Fire In The " + randomNoun
 	elif junkrat == '6':
 		tweetStr = "Junkrat: Oops... " + randomPastVerb + " Something"
+	elif junkrat == '7':
+		tweetStr = "Junkrat: I Give It A " + str(random.randrange(0,11)) + "!"
 elif randomSentence == 'lucio':
 	#lucio
 	if lucio == '1':
@@ -246,6 +257,8 @@ elif randomSentence == 'lucio':
 		tweetStr = "Lucio: Happy " + randomNoun + "!"
 	elif lucio == '9':
 		tweetStr = "Lucio: Have Some " + randomHeroNoun + "-Oh's!"
+	elif lucio == '10':
+		tweetStr = "Lucio: I'm On Top Of The " + randomNoun
 elif randomSentence == 'mccree':
 	#mccree
 	if mccree == '1':
@@ -272,6 +285,8 @@ elif randomSentence == 'mccree':
 		tweetStr = "McCree: A Man's Gotta Have " + randomPluralNoun
 	elif mccree == '12':
 		tweetStr = "McCree: It's High " + randomNoun
+	elif mccree == '13':
+		tweetStr = "McCree: Boom Goes The " + randomNoun
 elif randomSentence == 'bastion':
 	#bastion
 	if bastion == '1':
@@ -307,6 +322,10 @@ elif randomSentence == 'mei':
 		tweetStr = "Mei: You Have To Let It " + randomVerb
 	elif mei == '6':
 		tweetStr = "Mei: I Was Only Trying To " + randomVerb
+	elif mei == '7':
+		tweetStr = "Mei: Did You " + randomVerb + " Something?"
+	elif mei == '8':
+		tweetStr = "Mei: I'm Going To Have To " + randomVerb + " The Heck Out Of This!"
 elif randomSentence == 'mercy':
 	#mercy
 	if mercy == '1':
@@ -323,6 +342,10 @@ elif randomSentence == 'mercy':
 		tweetStr = "Mercy: The " + randomNoun + " Is In"
 	elif mercy == '7':
 		tweetStr = "Mercy: " + randomPluralNoun + " Never " + randomVerb
+	elif mercy == '8':
+		tweetStr = "Mercy: The Doctor Will " + randomVerb + " You"
+	elif mercy == '9':
+		tweetStr = "Mercy: Sometimes You " + randomVerb + " Me"
 elif randomSentence == 'pharah':
 	#pharah
 	if pharah == '1':
@@ -347,6 +370,10 @@ elif randomSentence == 'pharah':
 		tweetStr = "Pharah: " + randomVerb + " Casual"
 	elif pharah == '11':
 		tweetStr = "Pharah: " + randomVerb + " Me"
+	elif pharah == '12':
+		tweetStr = "Pharah: Leave This To " + randomArticleNoun
+	elif pharah == '13':
+		tweetStr = "Pharah: Put Your " + randomNoun + " In My " + randomPluralNoun
 elif randomSentence == 'reaper':
 	#reaper
 	if reaper == '1':
@@ -375,6 +402,8 @@ elif randomSentence == 'reaper':
 		tweetStr = "Reaper: I'll " + randomVerb + " You In Hell"
 	elif reaper == '13':
 		tweetStr = "Reaper: No " + randomNoun + " Left Behind"
+	elif reaper == '14':
+		tweetStr = "Reaper: Just " + randomVerb
 elif randomSentence == 'reinhardt':
 	#reinhardt
 	if reinhardt == '1':
@@ -385,6 +414,12 @@ elif randomSentence == 'reinhardt':
 		tweetStr = "Reinhardt: " + randomVerb + " Your Elders"
 	elif reinhardt == '4':
 		tweetStr = "Reinhardt: " + randomNoun + "! " + randomNoun2 + "! Reinhardt!"
+	elif reinhardt == '5':
+		tweetStr = "Reinhardt: Are You Afraid To " + randomVerb + " Me?"
+	elif reinhardt == '6':
+		tweetStr = "Reinhardt: This Old " + randomNoun + " Still Knows A Few Tricks"
+	elif reinhardt == '7':
+		tweetStr = "Reinhardt: " + str(random.randrange(0,101)) + "% German Power"
 elif randomSentence == 'roadhog':
 	#roadhog
 	if roadhog == '1':
@@ -405,6 +440,10 @@ elif randomSentence == 'roadhog':
 		tweetStr = "Roadhog: Want Some " + randomNoun + "?"
 	elif roadhog == '9':
 		tweetStr = "Roadhog: I've " + randomPastVerb + " " + "Someone For Less Than That"
+	elif roadhog == '10':
+		tweetStr = "Roadhog: There's No 'I' In " + randomNoun
+	elif roadhot == '11':
+		tweetStr = "Roadhog: I Don't Like " + randomPluralNoun
 elif randomSentence == 'soldier':
 	#soldier: 76
 	if soldier == '1':
@@ -495,6 +534,8 @@ elif randomSentence == 'widowmaker':
 		tweetStr = "Widowmaker: No One Can Hide From My " + randomNoun
 	elif widowmaker == '10':
 		tweetStr = "Widowmaker: What " + randomArticleNoun
+	elif widowmaker == '11':
+		tweetStr = "Widowmaker: A Perfect " + str(random.randrange(0, 11))
 #winston
 elif randomSentence == 'winston':
 	if winston == '1':
@@ -525,6 +566,10 @@ elif randomSentence == 'zarya':
 		tweetStr = "Zarya: Welcome To The " + randomNoun + " Show"
 	elif zarya == '7':
 		tweetStr = "Zarya: No " + randomNoun + ", No " + randomNoun2
+	elif zarya == '8':
+		tweetStr = "Zarya: Get Down, Give Me " + str(random.randrange(0, 100)) + "!"
+	elif zarya == '9':
+		tweetStr = "Zarya: It's Only " + randomArticleNoun + ", Why Do You Have To Be Mad?"
 #zenyatta
 elif randomSentence == 'zenyatta':
 	if zenyatta == '1':
@@ -547,6 +592,8 @@ elif randomSentence == 'zenyatta':
 		tweetStr = "Zenyatta: Every " + randomNoun + " " + randomPresentVerb + " In Its Own " + randomNoun
 	elif zenyatta == '10':
 		tweetStr = "Zenyatta: " + randomVerb + " Along The Path To Enlightenment"
+	elif zenyatta == '11':
+		tweetStr = "Zenyatta: " + randomNoun + " And " + randomPluralNoun + " Be Upon You All"
 #sombra
 elif randomSentence == 'sombra':
 	if sombra == '1':
@@ -599,3 +646,11 @@ elif randomSentence == 'doomfist':
 		tweetStr = "Doomfist: " + randomVerb + " Me"
 	elif doomfist == '7':
 		tweetStr = "Doomfist: You Must Be " + randomIngVerb
+#moira
+elif randomSentence == 'moira':
+	if moira == '1':
+		tweetStr = "Moira: I'm " + randomIngVerb
+	elif moira == '2':
+		tweetStr = "Moira: One " + randomNoun + " " + randomPresentVerb + ", The Other " + randomPresentVerb2
+	elif moira == '3':
+		tweetStr = "Moira: What An Interesting " + randomNoun
