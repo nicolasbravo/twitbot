@@ -24,7 +24,7 @@ else:
 pluralNouns = ["Children", "Mothers", "Scopes", "Challengers", "Bad Guys", "Hacks", "Blades", "Challenges", "Humans", "Things", "Distractions", "Moments", "Dragons", "Dojos", "Barbecues", "Birthdays", "Days", "Champions", "Worlds", "Noises", "Bullets", "Names", "Lessons", "Obstacles", "Eyes", "Consultation Fees", "Doctors", "Miracles", "Opinions", "Cakes", "Hands", "Skies", "Radars", "Professionals", "Breaks", "Men", "Refrigerators", "Psychopaths", "Ghosts", "Dogs", "Candies", "Babies", "Hooks", "Animals", "Punks", "Armies", "Wars", "Soldiers", "Medals", "Realities", "Chickens", "Feathers", "Letterboxes", "Engineers", "People", "Experts", "Pigs", "Bags", "Feelings", "Heroes", "Deaths", "Cakes", "Kills", "Spiders", "Flies", "Bananas", "Monkeys", "Mountains", "Games", "Bears", "Guns", "Submarines", "Minds", "Butterflies", "Blessings", "Graveyards", "Candies", "Glitches", "Systems", "Planets", "Bugs", "Heads", "Moons", "Lives", "Gifts", "Funerals", "Celebrations", "Fireworks", "Roosters", "Parties", "Costumes", "Snowflakes", "Pens", "Hugs", "Modules", "Situations", "Errors", "Functionalities", "Swords", "Enemies", "Fires", "Holes", "Rules", "Rockets", "Queens", "Hammers", "Sights", "Lights", "Tools", "Performances", "Emotions", "Glasses", "Combos", "Punches", "Commentaries", "Fists", "Fathers", "Bosses", "Drinks", "Judgements", "Levels", "Beers", "Adults", "Car Washes"]
 randomPluralNoun = random.choice(pluralNouns)
 #proper
-heroNouns = ["Ana", "Bastion", "Doomfist", "D.Va", "Genji", "Hanzo", "Junkrat", "Lucio", "McCree", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Roadhog", "Soldier: 76", "Sombra", "Symmetra", "Torbjorn", "Tracer", "Widowmaker", "Winston", "Zarya", "Zenyatta"]
+heroNouns = ["Ana", "Bastion", "Doomfist", "DVa", "Genji", "Hanzo", "Junkrat", "Lucio", "McCree", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Roadhog", "Soldier: 76", "Sombra", "Symmetra", "Torbjorn", "Tracer", "Widowmaker", "Winston", "Zarya", "Zenyatta"]
 randomHeroNoun = random.choice(heroNouns)
 #bastion
 bastionWords = ["Doo", "Woo", "Boo", "Doo", "Dee", "Chirr", "Dah", "Wee", "Dun", "Boop", "Dweet", "Hee", "Hoo", "Sh", "Zwee", "Bud", "Dwee", "Woop", "Woh", "Bew"]
@@ -172,23 +172,23 @@ if randomSentence == 'ana':
 elif randomSentence == 'dva':
 	#dva
 	if dva == '1':
-		tweetStr = "D.Va: Love " + randomHeroNoun 
+		tweetStr = "DVa: Love " + randomHeroNoun 
 	elif dva == '2':
-		tweetStr = "D.Va: Here Comes A New " + randomNoun +  "!"
+		tweetStr = "DVa: Here Comes A New " + randomNoun +  "!"
 	elif dva == '3':
-		tweetStr = "D.Va: I Play To " + randomVerb
+		tweetStr = "DVa: I Play To " + randomVerb
 	elif dva == '4':
-		tweetStr = "D.Va: No " + randomPluralNoun + " Required"
+		tweetStr = "DVa: No " + randomPluralNoun + " Required"
 	elif dva == '5':
-		tweetStr = "D.Va: Happy " + randomNoun + "!"
+		tweetStr = "DVa: Happy " + randomNoun + "!"
 	elif dva == '6':
-		tweetStr = "D.Va: I Get The Feeling You're Not " + randomIngVerb + " Me Seriously"
+		tweetStr = "DVa: I Get The Feeling You're Not " + randomIngVerb + " Me Seriously"
 	elif dva == '7':
-		tweetStr = "D.Va: " + randomVerb + " This"
+		tweetStr = "DVa: " + randomVerb + " This"
 	elif dva == '8':
-		tweetStr = "D.Va: D.Va - 1, " + randomHeroNoun + " - 0"
+		tweetStr = "DVa: DVa - 1, " + randomHeroNoun + " - 0"
 	elif dva == '9':
-		tweetStr = "D.Va: I'm #" + str(random.randrange(0,100)) + "!"
+		tweetStr = "DVa: I'm #" + str(random.randrange(0,100)) + "!"
 elif randomSentence == 'genji':
 	#genji
 	if genji == '1':
